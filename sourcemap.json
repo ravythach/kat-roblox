@@ -47,12 +47,108 @@
         {
           "name": "Packages",
           "className": "Folder",
-          "guid": "629281",
+          "guid": "822011",
           "children": [
+            {
+              "name": "_Index",
+              "className": "Folder",
+              "guid": "822015",
+              "children": [
+                {
+                  "name": "weenachuangkud_fastcast2@0.1.5",
+                  "className": "Folder",
+                  "guid": "822017",
+                  "children": [
+                    {
+                      "name": "fastcast2",
+                      "className": "ModuleScript",
+                      "guid": "822075",
+                      "filePaths": [
+                        "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2.luau"
+                      ],
+                      "children": [
+                        {
+                          "name": "ActiveCast",
+                          "className": "ModuleScript",
+                          "guid": "822079",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/ActiveCast.luau"
+                          ]
+                        },
+                        {
+                          "name": "BaseCastSerial",
+                          "className": "ModuleScript",
+                          "guid": "822081",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/BaseCastSerial.luau"
+                          ]
+                        },
+                        {
+                          "name": "Config",
+                          "className": "ModuleScript",
+                          "guid": "822093",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Config.luau"
+                          ]
+                        },
+                        {
+                          "name": "DefaultConfigs",
+                          "className": "ModuleScript",
+                          "guid": "822095",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/DefaultConfigs.luau"
+                          ]
+                        },
+                        {
+                          "name": "FastCastEnums",
+                          "className": "ModuleScript",
+                          "guid": "822087",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/FastCastEnums.luau"
+                          ]
+                        },
+                        {
+                          "name": "Motor6DCache",
+                          "className": "ModuleScript",
+                          "guid": "822083",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Motor6DCache.luau"
+                          ]
+                        },
+                        {
+                          "name": "SerialSimulation",
+                          "className": "ModuleScript",
+                          "guid": "822085",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/SerialSimulation.luau"
+                          ]
+                        },
+                        {
+                          "name": "Signal",
+                          "className": "ModuleScript",
+                          "guid": "822091",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Signal.luau"
+                          ]
+                        },
+                        {
+                          "name": "TypeDefinitions",
+                          "className": "ModuleScript",
+                          "guid": "822089",
+                          "filePaths": [
+                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/TypeDefinitions.luau"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "name": "FastCast2",
               "className": "ModuleScript",
-              "guid": "629295",
+              "guid": "822047",
               "filePaths": [
                 "sync/ReplicatedStorage/Packages/FastCast2.luau"
               ]
@@ -69,7 +165,7 @@
         {
           "name": "MainScript",
           "className": "Script",
-          "guid": "629293",
+          "guid": "822031",
           "filePaths": [
             "sync/ServerScriptService/MainScript.server.luau"
           ]
@@ -77,7 +173,7 @@
         {
           "name": "PlayerStats",
           "className": "Script",
-          "guid": "629291",
+          "guid": "822038",
           "filePaths": [
             "sync/ServerScriptService/PlayerStats.server.luau"
           ]
@@ -92,12 +188,12 @@
         {
           "name": "Azul",
           "className": "Folder",
-          "guid": "629280",
+          "guid": "822013",
           "children": [
             {
               "name": "Config",
               "className": "ModuleScript",
-              "guid": "629288",
+              "guid": "822058",
               "filePaths": [
                 "sync/ServerStorage/Azul/Config.luau"
               ]
@@ -593,13 +689,13 @@
       "children": [
         {
           "name": "Gumball Gun",
-          "className": "Folder",
-          "guid": "629283",
+          "className": "Tool",
+          "guid": "929127",
           "children": [
             {
               "name": "Client",
               "className": "LocalScript",
-              "guid": "629301",
+              "guid": "822052",
               "filePaths": [
                 "sync/StarterPack/Gumball Gun/Client.client.luau"
               ]
@@ -607,7 +703,7 @@
             {
               "name": "FastCastRedux",
               "className": "ModuleScript",
-              "guid": "629307",
+              "guid": "822054",
               "filePaths": [
                 "sync/StarterPack/Gumball Gun/FastCastRedux.luau"
               ],
@@ -615,7 +711,7 @@
                 {
                   "name": "ActiveCast",
                   "className": "ModuleScript",
-                  "guid": "629323",
+                  "guid": "822067",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/ActiveCast.luau"
                   ]
@@ -623,7 +719,7 @@
                 {
                   "name": "Signal",
                   "className": "ModuleScript",
-                  "guid": "629315",
+                  "guid": "822064",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/Signal.luau"
                   ]
@@ -631,7 +727,7 @@
                 {
                   "name": "Table",
                   "className": "ModuleScript",
-                  "guid": "629319",
+                  "guid": "822077",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/Table.luau"
                   ]
@@ -639,7 +735,7 @@
                 {
                   "name": "TypeDefinitions",
                   "className": "ModuleScript",
-                  "guid": "629317",
+                  "guid": "822069",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/TypeDefinitions.luau"
                   ]
@@ -647,7 +743,7 @@
                 {
                   "name": "TypeMarshaller",
                   "className": "ModuleScript",
-                  "guid": "629321",
+                  "guid": "822073",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/TypeMarshaller.luau"
                   ]
@@ -655,9 +751,132 @@
               ]
             },
             {
+              "name": "FireEvent",
+              "className": "RemoteEvent",
+              "guid": "929124"
+            },
+            {
+              "name": "GumballGun-LP",
+              "className": "Model",
+              "guid": "929121",
+              "children": [
+                {
+                  "name": "Body",
+                  "className": "MeshPart",
+                  "guid": "929120",
+                  "children": [
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929130"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929131"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929132"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929133"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929134"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929135"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929136"
+                    }
+                  ]
+                },
+                {
+                  "name": "Glassball",
+                  "className": "MeshPart",
+                  "guid": "929118",
+                  "children": [
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929128"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "929129"
+                    }
+                  ]
+                },
+                {
+                  "name": "GlassToBodyConnector",
+                  "className": "MeshPart",
+                  "guid": "929114"
+                },
+                {
+                  "name": "GlassToTubeConnector",
+                  "className": "MeshPart",
+                  "guid": "929113"
+                },
+                {
+                  "name": "Handle",
+                  "className": "MeshPart",
+                  "guid": "929116"
+                },
+                {
+                  "name": "Muzzle",
+                  "className": "MeshPart",
+                  "guid": "929115"
+                },
+                {
+                  "name": "PackageLink",
+                  "className": "PackageLink",
+                  "guid": "929122"
+                },
+                {
+                  "name": "Trigger",
+                  "className": "MeshPart",
+                  "guid": "929119"
+                },
+                {
+                  "name": "Tube",
+                  "className": "MeshPart",
+                  "guid": "929117"
+                }
+              ]
+            },
+            {
+              "name": "Handle",
+              "className": "Part",
+              "guid": "929123",
+              "children": [
+                {
+                  "name": "FirePoint",
+                  "className": "Attachment",
+                  "guid": "929111"
+                },
+                {
+                  "name": "FireSound",
+                  "className": "Sound",
+                  "guid": "929126"
+                }
+              ]
+            },
+            {
               "name": "PartCache",
               "className": "ModuleScript",
-              "guid": "629313",
+              "guid": "822060",
               "filePaths": [
                 "sync/StarterPack/Gumball Gun/PartCache.luau"
               ],
@@ -665,7 +884,7 @@
                 {
                   "name": "Table",
                   "className": "ModuleScript",
-                  "guid": "629325",
+                  "guid": "822071",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/PartCache/Table.luau"
                   ]
@@ -675,17 +894,12 @@
             {
               "name": "Server",
               "className": "Script",
-              "guid": "629311",
+              "guid": "822056",
               "filePaths": [
                 "sync/StarterPack/Gumball Gun/Server.server.luau"
               ]
             }
           ]
-        },
-        {
-          "name": "Jumbo Gumbo",
-          "className": "Folder",
-          "guid": "629282"
         },
         {
           "name": "Jumbo Gumbo",
@@ -695,7 +909,7 @@
             {
               "name": "Client",
               "className": "LocalScript",
-              "guid": "629297",
+              "guid": "822050",
               "filePaths": [
                 "sync/StarterPack/Jumbo Gumbo/Client.client.luau"
               ]
@@ -826,7 +1040,7 @@
             {
               "name": "Server",
               "className": "Script",
-              "guid": "629299",
+              "guid": "822036",
               "filePaths": [
                 "sync/StarterPack/Jumbo Gumbo/Server.server.luau"
               ]
@@ -858,7 +1072,7 @@
             {
               "name": "CameraToggle",
               "className": "LocalScript",
-              "guid": "629303",
+              "guid": "822041",
               "filePaths": [
                 "sync/StarterPlayer/StarterPlayerScripts/CameraToggle.client.luau"
               ]
@@ -883,11 +1097,6 @@
               "guid": "12411"
             }
           ]
-        },
-        {
-          "name": "BlueRobot",
-          "className": "Folder",
-          "guid": "629285"
         },
         {
           "name": "BlueRobot",
@@ -927,7 +1136,7 @@
             {
               "name": "DeathOnTouch",
               "className": "Script",
-              "guid": "629305",
+              "guid": "822045",
               "filePaths": [
                 "sync/Workspace/BlueRobot/DeathOnTouch.server.luau"
               ]
@@ -986,7 +1195,7 @@
         {
           "name": "Camera",
           "className": "Camera",
-          "guid": "481553"
+          "guid": "203532"
         },
         {
           "name": "Map",
