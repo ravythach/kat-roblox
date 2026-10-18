@@ -64,14 +64,6 @@
           "filePaths": [
             "sync/ServerScriptService/PlayerStats.server.luau"
           ]
-        },
-        {
-          "name": "ZombieRespawnManager",
-          "className": "Script",
-          "guid": "12342",
-          "filePaths": [
-            "sync/ServerScriptService/ZombieRespawnManager.server.luau"
-          ]
         }
       ]
     },
