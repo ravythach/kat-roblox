@@ -5,7 +5,7 @@
     {
       "name": "Lighting",
       "className": "Lighting",
-      "guid": "12105",
+      "guid": "12109",
       "children": [
         {
           "name": "Atmosphere",
@@ -15,54 +15,54 @@
         {
           "name": "Bloom",
           "className": "BloomEffect",
-          "guid": "11983"
+          "guid": "11984"
         },
         {
           "name": "DepthOfField",
           "className": "DepthOfFieldEffect",
-          "guid": "11997"
+          "guid": "11998"
         },
         {
           "name": "Sky",
           "className": "Sky",
-          "guid": "12347"
+          "guid": "12374"
         },
         {
           "name": "SunRays",
           "className": "SunRaysEffect",
-          "guid": "12370"
+          "guid": "12398"
         }
       ]
     },
     {
       "name": "ReplicatedFirst",
       "className": "ReplicatedFirst",
-      "guid": "8698"
+      "guid": "9016"
     },
     {
       "name": "ReplicatedStorage",
       "className": "ReplicatedStorage",
-      "guid": "12336",
+      "guid": "12364",
       "children": [
         {
           "name": "Packages",
           "className": "Folder",
-          "guid": "836239",
+          "guid": "12003",
           "children": [
             {
               "name": "_Index",
               "className": "Folder",
-              "guid": "836240",
+              "guid": "12004",
               "children": [
                 {
                   "name": "weenachuangkud_fastcast2@0.1.5",
                   "className": "Folder",
-                  "guid": "836245",
+                  "guid": "12005",
                   "children": [
                     {
                       "name": "fastcast2",
                       "className": "ModuleScript",
-                      "guid": "836246",
+                      "guid": "12216",
                       "filePaths": [
                         "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2.luau"
                       ],
@@ -70,7 +70,7 @@
                         {
                           "name": "ActiveCast",
                           "className": "ModuleScript",
-                          "guid": "836262",
+                          "guid": "12224",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/ActiveCast.luau"
                           ]
@@ -78,7 +78,7 @@
                         {
                           "name": "BaseCastSerial",
                           "className": "ModuleScript",
-                          "guid": "836256",
+                          "guid": "12221",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/BaseCastSerial.luau"
                           ]
@@ -86,7 +86,7 @@
                         {
                           "name": "Config",
                           "className": "ModuleScript",
-                          "guid": "836260",
+                          "guid": "12223",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Config.luau"
                           ]
@@ -94,7 +94,7 @@
                         {
                           "name": "DefaultConfigs",
                           "className": "ModuleScript",
-                          "guid": "836254",
+                          "guid": "12220",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/DefaultConfigs.luau"
                           ]
@@ -102,7 +102,7 @@
                         {
                           "name": "FastCastEnums",
                           "className": "ModuleScript",
-                          "guid": "836248",
+                          "guid": "12217",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/FastCastEnums.luau"
                           ]
@@ -110,7 +110,7 @@
                         {
                           "name": "Motor6DCache",
                           "className": "ModuleScript",
-                          "guid": "836250",
+                          "guid": "12218",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Motor6DCache.luau"
                           ]
@@ -118,7 +118,7 @@
                         {
                           "name": "SerialSimulation",
                           "className": "ModuleScript",
-                          "guid": "836252",
+                          "guid": "12219",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/SerialSimulation.luau"
                           ]
@@ -126,7 +126,7 @@
                         {
                           "name": "Signal",
                           "className": "ModuleScript",
-                          "guid": "836258",
+                          "guid": "12222",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Signal.luau"
                           ]
@@ -134,7 +134,7 @@
                         {
                           "name": "TypeDefinitions",
                           "className": "ModuleScript",
-                          "guid": "836264",
+                          "guid": "12225",
                           "filePaths": [
                             "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/TypeDefinitions.luau"
                           ]
@@ -148,7 +148,7 @@
             {
               "name": "FastCast2",
               "className": "ModuleScript",
-              "guid": "836241",
+              "guid": "12226",
               "filePaths": [
                 "sync/ReplicatedStorage/Packages/FastCast2.luau"
               ]
@@ -160,12 +160,12 @@
     {
       "name": "ServerScriptService",
       "className": "ServerScriptService",
-      "guid": "12344",
+      "guid": "12371",
       "children": [
         {
           "name": "MainScript",
           "className": "Script",
-          "guid": "12340",
+          "guid": "12368",
           "filePaths": [
             "sync/ServerScriptService/MainScript.server.luau"
           ]
@@ -173,7 +173,7 @@
         {
           "name": "PlayerStats",
           "className": "Script",
-          "guid": "12341",
+          "guid": "12369",
           "filePaths": [
             "sync/ServerScriptService/PlayerStats.server.luau"
           ]
@@ -183,17 +183,17 @@
     {
       "name": "ServerStorage",
       "className": "ServerStorage",
-      "guid": "12345",
+      "guid": "12372",
       "children": [
         {
           "name": "Azul",
           "className": "Folder",
-          "guid": "12066",
+          "guid": "12070",
           "children": [
             {
               "name": "Config",
               "className": "ModuleScript",
-              "guid": "12202",
+              "guid": "12227",
               "filePaths": [
                 "sync/ServerStorage/Azul/Config.luau"
               ]
@@ -203,242 +203,68 @@
         {
           "name": "Eclipse Animator Saves",
           "className": "Folder",
-          "guid": "12002",
+          "guid": "12006",
           "children": [
             {
               "name": "EclipseRecovery",
               "className": "Folder",
-              "guid": "12003",
+              "guid": "12007",
               "children": [
                 {
                   "name": "Copy1_1",
                   "className": "Folder",
-                  "guid": "12005",
+                  "guid": "12009",
                   "children": [
                     {
                       "name": "Archive",
                       "className": "Folder",
-                      "guid": "12006",
+                      "guid": "12010",
                       "children": [
                         {
                           "name": "EclipseNavigationOrigin",
                           "className": "Folder",
-                          "guid": "12007",
+                          "guid": "12011",
                           "children": [
                             {
                               "name": "000001",
                               "className": "StringValue",
-                              "guid": "12355"
+                              "guid": "12383"
                             }
                           ]
                         },
                         {
                           "name": "EclipsePhysicsSetup",
                           "className": "Folder",
-                          "guid": "12014"
+                          "guid": "12018"
                         },
                         {
                           "name": "EclipseSubtitles",
+                          "className": "Folder",
+                          "guid": "12016",
+                          "children": [
+                            {
+                              "name": "EclipseEvents",
+                              "className": "Folder",
+                              "guid": "12017",
+                              "children": [
+                                {
+                                  "name": "FaceKeys",
+                                  "className": "StringValue",
+                                  "guid": "12384"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "EclipseTrackOrganization",
                           "className": "Folder",
                           "guid": "12012",
                           "children": [
                             {
-                              "name": "EclipseEvents",
+                              "name": "Item1",
                               "className": "Folder",
                               "guid": "12013",
-                              "children": [
-                                {
-                                  "name": "FaceKeys",
-                                  "className": "StringValue",
-                                  "guid": "12356"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "EclipseTrackOrganization",
-                          "className": "Folder",
-                          "guid": "12008",
-                          "children": [
-                            {
-                              "name": "Item1",
-                              "className": "Folder",
-                              "guid": "12009",
-                              "children": [
-                                {
-                                  "name": "Parent",
-                                  "className": "ObjectValue",
-                                  "guid": "12217"
-                                },
-                                {
-                                  "name": "ParentRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12218"
-                                },
-                                {
-                                  "name": "Target",
-                                  "className": "ObjectValue",
-                                  "guid": "12215"
-                                },
-                                {
-                                  "name": "TargetRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12216"
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Item2",
-                              "className": "Folder",
-                              "guid": "12010",
-                              "children": [
-                                {
-                                  "name": "Parent",
-                                  "className": "ObjectValue",
-                                  "guid": "12221"
-                                },
-                                {
-                                  "name": "ParentRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12222"
-                                },
-                                {
-                                  "name": "Target",
-                                  "className": "ObjectValue",
-                                  "guid": "12219"
-                                },
-                                {
-                                  "name": "TargetRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12220"
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Item3",
-                              "className": "Folder",
-                              "guid": "12011",
-                              "children": [
-                                {
-                                  "name": "Target",
-                                  "className": "ObjectValue",
-                                  "guid": "12223"
-                                },
-                                {
-                                  "name": "TargetRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12224"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Rigs",
-                          "className": "Folder",
-                          "guid": "12015",
-                          "children": [
-                            {
-                              "name": "BlueRobot-Final",
-                              "className": "Folder",
-                              "guid": "12016",
-                              "children": [
-                                {
-                                  "name": "Rig",
-                                  "className": "ObjectValue",
-                                  "guid": "12235"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Copy1_2",
-                  "className": "Folder",
-                  "guid": "12025",
-                  "children": [
-                    {
-                      "name": "Archive",
-                      "className": "Folder",
-                      "guid": "12026",
-                      "children": [
-                        {
-                          "name": "EclipseNavigationOrigin",
-                          "className": "Folder",
-                          "guid": "12027",
-                          "children": [
-                            {
-                              "name": "000001",
-                              "className": "StringValue",
-                              "guid": "12360"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "EclipsePhysicsSetup",
-                          "className": "Folder",
-                          "guid": "12034"
-                        },
-                        {
-                          "name": "EclipseSubtitles",
-                          "className": "Folder",
-                          "guid": "12032",
-                          "children": [
-                            {
-                              "name": "EclipseEvents",
-                              "className": "Folder",
-                              "guid": "12033",
-                              "children": [
-                                {
-                                  "name": "FaceKeys",
-                                  "className": "StringValue",
-                                  "guid": "12361"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "EclipseTrackOrganization",
-                          "className": "Folder",
-                          "guid": "12028",
-                          "children": [
-                            {
-                              "name": "Item1",
-                              "className": "Folder",
-                              "guid": "12029",
-                              "children": [
-                                {
-                                  "name": "Parent",
-                                  "className": "ObjectValue",
-                                  "guid": "12238"
-                                },
-                                {
-                                  "name": "ParentRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12239"
-                                },
-                                {
-                                  "name": "Target",
-                                  "className": "ObjectValue",
-                                  "guid": "12236"
-                                },
-                                {
-                                  "name": "TargetRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12237"
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Item2",
-                              "className": "Folder",
-                              "guid": "12030",
                               "children": [
                                 {
                                   "name": "Parent",
@@ -463,10 +289,20 @@
                               ]
                             },
                             {
-                              "name": "Item3",
+                              "name": "Item2",
                               "className": "Folder",
-                              "guid": "12031",
+                              "guid": "12014",
                               "children": [
+                                {
+                                  "name": "Parent",
+                                  "className": "ObjectValue",
+                                  "guid": "12246"
+                                },
+                                {
+                                  "name": "ParentRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12247"
+                                },
                                 {
                                   "name": "Target",
                                   "className": "ObjectValue",
@@ -478,23 +314,40 @@
                                   "guid": "12245"
                                 }
                               ]
+                            },
+                            {
+                              "name": "Item3",
+                              "className": "Folder",
+                              "guid": "12015",
+                              "children": [
+                                {
+                                  "name": "Target",
+                                  "className": "ObjectValue",
+                                  "guid": "12248"
+                                },
+                                {
+                                  "name": "TargetRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12249"
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "name": "Rigs",
                           "className": "Folder",
-                          "guid": "12035",
+                          "guid": "12019",
                           "children": [
                             {
                               "name": "BlueRobot-Final",
                               "className": "Folder",
-                              "guid": "12036",
+                              "guid": "12020",
                               "children": [
                                 {
                                   "name": "Rig",
                                   "className": "ObjectValue",
-                                  "guid": "12256"
+                                  "guid": "12260"
                                 }
                               ]
                             }
@@ -505,46 +358,46 @@
                   ]
                 },
                 {
-                  "name": "Copy2_1",
+                  "name": "Copy1_2",
                   "className": "Folder",
-                  "guid": "12045",
+                  "guid": "12029",
                   "children": [
                     {
                       "name": "Archive",
                       "className": "Folder",
-                      "guid": "12046",
+                      "guid": "12030",
                       "children": [
                         {
                           "name": "EclipseNavigationOrigin",
                           "className": "Folder",
-                          "guid": "12047",
+                          "guid": "12031",
                           "children": [
                             {
                               "name": "000001",
                               "className": "StringValue",
-                              "guid": "12365"
+                              "guid": "12388"
                             }
                           ]
                         },
                         {
                           "name": "EclipsePhysicsSetup",
                           "className": "Folder",
-                          "guid": "12054"
+                          "guid": "12038"
                         },
                         {
                           "name": "EclipseSubtitles",
                           "className": "Folder",
-                          "guid": "12052",
+                          "guid": "12036",
                           "children": [
                             {
                               "name": "EclipseEvents",
                               "className": "Folder",
-                              "guid": "12053",
+                              "guid": "12037",
                               "children": [
                                 {
                                   "name": "FaceKeys",
                                   "className": "StringValue",
-                                  "guid": "12366"
+                                  "guid": "12389"
                                 }
                               ]
                             }
@@ -553,39 +406,12 @@
                         {
                           "name": "EclipseTrackOrganization",
                           "className": "Folder",
-                          "guid": "12048",
+                          "guid": "12032",
                           "children": [
                             {
                               "name": "Item1",
                               "className": "Folder",
-                              "guid": "12049",
-                              "children": [
-                                {
-                                  "name": "Parent",
-                                  "className": "ObjectValue",
-                                  "guid": "12259"
-                                },
-                                {
-                                  "name": "ParentRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12260"
-                                },
-                                {
-                                  "name": "Target",
-                                  "className": "ObjectValue",
-                                  "guid": "12257"
-                                },
-                                {
-                                  "name": "TargetRig",
-                                  "className": "ObjectValue",
-                                  "guid": "12258"
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Item2",
-                              "className": "Folder",
-                              "guid": "12050",
+                              "guid": "12033",
                               "children": [
                                 {
                                   "name": "Parent",
@@ -610,10 +436,20 @@
                               ]
                             },
                             {
-                              "name": "Item3",
+                              "name": "Item2",
                               "className": "Folder",
-                              "guid": "12051",
+                              "guid": "12034",
                               "children": [
+                                {
+                                  "name": "Parent",
+                                  "className": "ObjectValue",
+                                  "guid": "12267"
+                                },
+                                {
+                                  "name": "ParentRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12268"
+                                },
                                 {
                                   "name": "Target",
                                   "className": "ObjectValue",
@@ -625,23 +461,187 @@
                                   "guid": "12266"
                                 }
                               ]
+                            },
+                            {
+                              "name": "Item3",
+                              "className": "Folder",
+                              "guid": "12035",
+                              "children": [
+                                {
+                                  "name": "Target",
+                                  "className": "ObjectValue",
+                                  "guid": "12269"
+                                },
+                                {
+                                  "name": "TargetRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12270"
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "name": "Rigs",
                           "className": "Folder",
-                          "guid": "12055",
+                          "guid": "12039",
                           "children": [
                             {
                               "name": "BlueRobot-Final",
                               "className": "Folder",
-                              "guid": "12056",
+                              "guid": "12040",
                               "children": [
                                 {
                                   "name": "Rig",
                                   "className": "ObjectValue",
-                                  "guid": "12277"
+                                  "guid": "12281"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Copy2_1",
+                  "className": "Folder",
+                  "guid": "12049",
+                  "children": [
+                    {
+                      "name": "Archive",
+                      "className": "Folder",
+                      "guid": "12050",
+                      "children": [
+                        {
+                          "name": "EclipseNavigationOrigin",
+                          "className": "Folder",
+                          "guid": "12051",
+                          "children": [
+                            {
+                              "name": "000001",
+                              "className": "StringValue",
+                              "guid": "12393"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "EclipsePhysicsSetup",
+                          "className": "Folder",
+                          "guid": "12058"
+                        },
+                        {
+                          "name": "EclipseSubtitles",
+                          "className": "Folder",
+                          "guid": "12056",
+                          "children": [
+                            {
+                              "name": "EclipseEvents",
+                              "className": "Folder",
+                              "guid": "12057",
+                              "children": [
+                                {
+                                  "name": "FaceKeys",
+                                  "className": "StringValue",
+                                  "guid": "12394"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "EclipseTrackOrganization",
+                          "className": "Folder",
+                          "guid": "12052",
+                          "children": [
+                            {
+                              "name": "Item1",
+                              "className": "Folder",
+                              "guid": "12053",
+                              "children": [
+                                {
+                                  "name": "Parent",
+                                  "className": "ObjectValue",
+                                  "guid": "12284"
+                                },
+                                {
+                                  "name": "ParentRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12285"
+                                },
+                                {
+                                  "name": "Target",
+                                  "className": "ObjectValue",
+                                  "guid": "12282"
+                                },
+                                {
+                                  "name": "TargetRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12283"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Item2",
+                              "className": "Folder",
+                              "guid": "12054",
+                              "children": [
+                                {
+                                  "name": "Parent",
+                                  "className": "ObjectValue",
+                                  "guid": "12288"
+                                },
+                                {
+                                  "name": "ParentRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12289"
+                                },
+                                {
+                                  "name": "Target",
+                                  "className": "ObjectValue",
+                                  "guid": "12286"
+                                },
+                                {
+                                  "name": "TargetRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12287"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Item3",
+                              "className": "Folder",
+                              "guid": "12055",
+                              "children": [
+                                {
+                                  "name": "Target",
+                                  "className": "ObjectValue",
+                                  "guid": "12290"
+                                },
+                                {
+                                  "name": "TargetRig",
+                                  "className": "ObjectValue",
+                                  "guid": "12291"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Rigs",
+                          "className": "Folder",
+                          "guid": "12059",
+                          "children": [
+                            {
+                              "name": "BlueRobot-Final",
+                              "className": "Folder",
+                              "guid": "12060",
+                              "children": [
+                                {
+                                  "name": "Rig",
+                                  "className": "ObjectValue",
+                                  "guid": "12302"
                                 }
                               ]
                             }
@@ -654,14 +654,19 @@
                 {
                   "name": "LegacySettings",
                   "className": "Folder",
-                  "guid": "12004"
+                  "guid": "12008"
+                },
+                {
+                  "name": "RecoveryRuntime",
+                  "className": "Folder",
+                  "guid": "605944"
                 }
               ]
             },
             {
               "name": "EclipseSubtitleTrack",
               "className": "Folder",
-              "guid": "12065"
+              "guid": "12069"
             }
           ]
         }
@@ -670,7 +675,7 @@
     {
       "name": "SoundService",
       "className": "SoundService",
-      "guid": "7034"
+      "guid": "7233"
     },
     {
       "name": "StarterGui",
@@ -685,28 +690,20 @@
         {
           "name": "Gumball Gun",
           "className": "Tool",
-          "guid": "12384",
+          "guid": "12412",
           "children": [
             {
               "name": "Client",
               "className": "LocalScript",
-              "guid": "12107",
+              "guid": "12111",
               "filePaths": [
                 "sync/StarterPack/Gumball Gun/Client.client.luau"
               ]
             },
             {
-              "name": "DebugScript",
-              "className": "Script",
-              "guid": "12339",
-              "filePaths": [
-                "sync/StarterPack/Gumball Gun/DebugScript.server.luau"
-              ]
-            },
-            {
               "name": "FastCastRedux",
               "className": "ModuleScript",
-              "guid": "12194",
+              "guid": "12208",
               "filePaths": [
                 "sync/StarterPack/Gumball Gun/FastCastRedux.luau"
               ],
@@ -714,7 +711,7 @@
                 {
                   "name": "ActiveCast",
                   "className": "ModuleScript",
-                  "guid": "12196",
+                  "guid": "12210",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/ActiveCast.luau"
                   ]
@@ -722,7 +719,7 @@
                 {
                   "name": "Signal",
                   "className": "ModuleScript",
-                  "guid": "12197",
+                  "guid": "12211",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/Signal.luau"
                   ]
@@ -730,7 +727,7 @@
                 {
                   "name": "Table",
                   "className": "ModuleScript",
-                  "guid": "12195",
+                  "guid": "12209",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/Table.luau"
                   ]
@@ -738,7 +735,7 @@
                 {
                   "name": "TypeDefinitions",
                   "className": "ModuleScript",
-                  "guid": "12198",
+                  "guid": "12212",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/TypeDefinitions.luau"
                   ]
@@ -746,7 +743,7 @@
                 {
                   "name": "TypeMarshaller",
                   "className": "ModuleScript",
-                  "guid": "12199",
+                  "guid": "12213",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/FastCastRedux/TypeMarshaller.luau"
                   ]
@@ -756,113 +753,113 @@
             {
               "name": "FireEvent",
               "className": "RemoteEvent",
-              "guid": "12335"
+              "guid": "12362"
             },
             {
               "name": "GumballGun-LP",
               "className": "Model",
-              "guid": "12193",
+              "guid": "12206",
               "children": [
                 {
                   "name": "Body",
                   "className": "MeshPart",
-                  "guid": "12170",
+                  "guid": "12175",
                   "children": [
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12398"
+                      "guid": "12427"
                     },
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12399"
+                      "guid": "12428"
                     },
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12400"
+                      "guid": "12429"
                     },
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12401"
+                      "guid": "12430"
                     },
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12402"
+                      "guid": "12431"
                     },
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12403"
+                      "guid": "12432"
                     },
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12404"
+                      "guid": "12433"
                     }
                   ]
                 },
                 {
                   "name": "Glassball",
                   "className": "MeshPart",
-                  "guid": "12176",
+                  "guid": "12181",
                   "children": [
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12405"
+                      "guid": "12434"
                     },
                     {
                       "name": "WeldConstraint",
                       "className": "WeldConstraint",
-                      "guid": "12406"
+                      "guid": "12435"
                     }
                   ]
                 },
                 {
                   "name": "GlassToBodyConnector",
                   "className": "MeshPart",
-                  "guid": "12172"
+                  "guid": "12177"
                 },
                 {
                   "name": "GlassToTubeConnector",
                   "className": "MeshPart",
-                  "guid": "12171"
+                  "guid": "12176"
                 },
                 {
                   "name": "Handle",
                   "className": "MeshPart",
-                  "guid": "12174"
+                  "guid": "12179"
                 },
                 {
                   "name": "Muzzle",
                   "className": "MeshPart",
-                  "guid": "12173"
+                  "guid": "12178"
                 },
                 {
                   "name": "PackageLink",
                   "className": "PackageLink",
-                  "guid": "12280"
+                  "guid": "12305"
                 },
                 {
                   "name": "Trigger",
                   "className": "MeshPart",
-                  "guid": "12177"
+                  "guid": "12182"
                 },
                 {
                   "name": "Tube",
                   "className": "MeshPart",
-                  "guid": "12175"
+                  "guid": "12180"
                 }
               ]
             },
             {
               "name": "Handle",
               "className": "Part",
-              "guid": "12333",
+              "guid": "12359",
               "children": [
                 {
                   "name": "FirePoint",
@@ -872,14 +869,14 @@
                 {
                   "name": "FireSound",
                   "className": "Sound",
-                  "guid": "12348"
+                  "guid": "12375"
                 }
               ]
             },
             {
               "name": "PartCache",
               "className": "ModuleScript",
-              "guid": "12200",
+              "guid": "12214",
               "filePaths": [
                 "sync/StarterPack/Gumball Gun/PartCache.luau"
               ],
@@ -887,7 +884,7 @@
                 {
                   "name": "Table",
                   "className": "ModuleScript",
-                  "guid": "12201",
+                  "guid": "12215",
                   "filePaths": [
                     "sync/StarterPack/Gumball Gun/PartCache/Table.luau"
                   ]
@@ -897,9 +894,155 @@
             {
               "name": "Server",
               "className": "Script",
-              "guid": "12338",
+              "guid": "12366",
               "filePaths": [
                 "sync/StarterPack/Gumball Gun/Server.server.luau"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Jumbo Gumbo",
+          "className": "Tool",
+          "guid": "12413",
+          "children": [
+            {
+              "name": "Client",
+              "className": "LocalScript",
+              "guid": "12112",
+              "filePaths": [
+                "sync/StarterPack/Jumbo Gumbo/Client.client.luau"
+              ]
+            },
+            {
+              "name": "FireEvent",
+              "className": "RemoteEvent",
+              "guid": "12363"
+            },
+            {
+              "name": "GumballGun-LP",
+              "className": "Model",
+              "guid": "12207",
+              "children": [
+                {
+                  "name": "Body",
+                  "className": "MeshPart",
+                  "guid": "12183",
+                  "children": [
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12436"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12437"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12438"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12439"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12440"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12441"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12442"
+                    }
+                  ]
+                },
+                {
+                  "name": "Glassball",
+                  "className": "MeshPart",
+                  "guid": "12189",
+                  "children": [
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12443"
+                    },
+                    {
+                      "name": "WeldConstraint",
+                      "className": "WeldConstraint",
+                      "guid": "12444"
+                    }
+                  ]
+                },
+                {
+                  "name": "GlassToBodyConnector",
+                  "className": "MeshPart",
+                  "guid": "12185"
+                },
+                {
+                  "name": "GlassToTubeConnector",
+                  "className": "MeshPart",
+                  "guid": "12184"
+                },
+                {
+                  "name": "Handle",
+                  "className": "MeshPart",
+                  "guid": "12187"
+                },
+                {
+                  "name": "Muzzle",
+                  "className": "MeshPart",
+                  "guid": "12186"
+                },
+                {
+                  "name": "PackageLink",
+                  "className": "PackageLink",
+                  "guid": "12306"
+                },
+                {
+                  "name": "Trigger",
+                  "className": "MeshPart",
+                  "guid": "12190"
+                },
+                {
+                  "name": "Tube",
+                  "className": "MeshPart",
+                  "guid": "12188"
+                }
+              ]
+            },
+            {
+              "name": "Handle",
+              "className": "Part",
+              "guid": "12360",
+              "children": [
+                {
+                  "name": "FirePoint",
+                  "className": "Attachment",
+                  "guid": "11976"
+                },
+                {
+                  "name": "FireSound",
+                  "className": "Sound",
+                  "guid": "12376"
+                }
+              ]
+            },
+            {
+              "name": "Server",
+              "className": "Script",
+              "guid": "12367",
+              "filePaths": [
+                "sync/StarterPack/Jumbo Gumbo/Server.server.luau"
               ]
             }
           ]
@@ -914,17 +1057,17 @@
         {
           "name": "StarterCharacterScripts",
           "className": "StarterCharacterScripts",
-          "guid": "12352"
+          "guid": "12380"
         },
         {
           "name": "StarterPlayerScripts",
           "className": "StarterPlayerScripts",
-          "guid": "12353",
+          "guid": "12381",
           "children": [
             {
               "name": "CameraToggle",
               "className": "LocalScript",
-              "guid": "12106",
+              "guid": "12110",
               "filePaths": [
                 "sync/StarterPlayer/StarterPlayerScripts/CameraToggle.client.luau"
               ]
@@ -941,54 +1084,54 @@
         {
           "name": "Baseplate",
           "className": "Part",
-          "guid": "12281",
+          "guid": "12307",
           "children": [
             {
               "name": "Texture",
               "className": "Texture",
-              "guid": "12383"
+              "guid": "12411"
             }
           ]
         },
         {
           "name": "BlueRobot",
           "className": "Model",
-          "guid": "12192",
+          "guid": "12205",
           "children": [
             {
               "name": "Antenna-L",
               "className": "MeshPart",
-              "guid": "12167"
+              "guid": "12172"
             },
             {
               "name": "Antenna-R",
               "className": "MeshPart",
-              "guid": "12159"
+              "guid": "12164"
             },
             {
               "name": "Arm-L",
               "className": "MeshPart",
-              "guid": "12166"
+              "guid": "12171"
             },
             {
               "name": "Arm-R",
               "className": "MeshPart",
-              "guid": "12169"
+              "guid": "12174"
             },
             {
               "name": "Body",
               "className": "MeshPart",
-              "guid": "12165"
+              "guid": "12170"
             },
             {
               "name": "Brain",
               "className": "MeshPart",
-              "guid": "12168"
+              "guid": "12173"
             },
             {
               "name": "DeathOnTouch",
               "className": "Script",
-              "guid": "12337",
+              "guid": "12365",
               "filePaths": [
                 "sync/Workspace/BlueRobot/DeathOnTouch.server.luau"
               ]
@@ -996,121 +1139,73 @@
             {
               "name": "Face",
               "className": "MeshPart",
-              "guid": "12164",
+              "guid": "12169",
               "children": [
                 {
                   "name": "WeldConstraint",
                   "className": "WeldConstraint",
-                  "guid": "12396"
+                  "guid": "12425"
                 }
               ]
             },
             {
               "name": "Face-BG",
               "className": "MeshPart",
-              "guid": "12161"
+              "guid": "12166"
             },
             {
               "name": "Head",
               "className": "MeshPart",
-              "guid": "12162"
+              "guid": "12167"
             },
             {
               "name": "Hitbox",
               "className": "UnionOperation",
-              "guid": "12391",
+              "guid": "12420",
               "children": [
                 {
                   "name": "WeldConstraint",
                   "className": "WeldConstraint",
-                  "guid": "12397"
+                  "guid": "12426"
                 }
               ]
             },
             {
               "name": "Leg-L",
               "className": "MeshPart",
-              "guid": "12160"
+              "guid": "12165"
             },
             {
               "name": "Leg-R",
               "className": "MeshPart",
-              "guid": "12163"
+              "guid": "12168"
             },
             {
               "name": "PackageLink",
               "className": "PackageLink",
-              "guid": "12279"
+              "guid": "12304"
             }
           ]
         },
         {
           "name": "Camera",
           "className": "Camera",
-          "guid": "204436"
+          "guid": "481553"
         },
         {
           "name": "Map",
           "className": "Folder",
-          "guid": "11998",
+          "guid": "11999",
           "children": [
             {
               "name": "HouseExterior",
               "className": "Model",
-              "guid": "12178",
+              "guid": "12191",
               "children": [
                 {
                   "name": "Exterior Wall",
                   "className": "Part",
-                  "guid": "12282",
-                  "children": [
-                    {
-                      "name": "Highlight",
-                      "className": "Highlight",
-                      "guid": "12069"
-                    }
-                  ]
-                },
-                {
-                  "name": "Exterior Wall",
-                  "className": "Part",
-                  "guid": "12283",
-                  "children": [
-                    {
-                      "name": "Highlight",
-                      "className": "Highlight",
-                      "guid": "12070"
-                    }
-                  ]
-                },
-                {
-                  "name": "Exterior Wall",
-                  "className": "Part",
-                  "guid": "12284",
-                  "children": [
-                    {
-                      "name": "Highlight",
-                      "className": "Highlight",
-                      "guid": "12071"
-                    }
-                  ]
-                },
-                {
-                  "name": "Floor",
-                  "className": "Part",
-                  "guid": "12285",
-                  "children": [
-                    {
-                      "name": "Highlight",
-                      "className": "Highlight",
-                      "guid": "12072"
-                    }
-                  ]
-                },
-                {
-                  "name": "Roof",
-                  "className": "Part",
-                  "guid": "12286",
+                  "guid": "12308",
                   "children": [
                     {
                       "name": "Highlight",
@@ -1120,79 +1215,91 @@
                   ]
                 },
                 {
+                  "name": "Exterior Wall",
+                  "className": "Part",
+                  "guid": "12309",
+                  "children": [
+                    {
+                      "name": "Highlight",
+                      "className": "Highlight",
+                      "guid": "12074"
+                    }
+                  ]
+                },
+                {
+                  "name": "Exterior Wall",
+                  "className": "Part",
+                  "guid": "12310",
+                  "children": [
+                    {
+                      "name": "Highlight",
+                      "className": "Highlight",
+                      "guid": "12075"
+                    }
+                  ]
+                },
+                {
+                  "name": "Floor",
+                  "className": "Part",
+                  "guid": "12311",
+                  "children": [
+                    {
+                      "name": "Highlight",
+                      "className": "Highlight",
+                      "guid": "12076"
+                    }
+                  ]
+                },
+                {
+                  "name": "Roof",
+                  "className": "Part",
+                  "guid": "12312",
+                  "children": [
+                    {
+                      "name": "Highlight",
+                      "className": "Highlight",
+                      "guid": "12077"
+                    }
+                  ]
+                },
+                {
                   "name": "Window",
                   "className": "Model",
-                  "guid": "12179",
+                  "guid": "12192",
                   "children": [
                     {
                       "name": "GlassWindow",
                       "className": "Part",
-                      "guid": "12289",
+                      "guid": "12315",
                       "children": [
                         {
                           "name": "Highlight",
                           "className": "Highlight",
-                          "guid": "12076"
+                          "guid": "12080"
                         }
                       ]
                     },
                     {
                       "name": "GlassWindow",
                       "className": "Part",
-                      "guid": "12304",
+                      "guid": "12330",
                       "children": [
                         {
                           "name": "Highlight",
                           "className": "Highlight",
-                          "guid": "12091"
+                          "guid": "12095"
                         }
                       ]
                     },
                     {
                       "name": "Union",
                       "className": "UnionOperation",
-                      "guid": "12390"
+                      "guid": "12419"
                     },
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12287",
-                      "children": [
-                        {
-                          "name": "Highlight",
-                          "className": "Highlight",
-                          "guid": "12074"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Window",
-                      "className": "Part",
-                      "guid": "12288",
-                      "children": [
-                        {
-                          "name": "Highlight",
-                          "className": "Highlight",
-                          "guid": "12075"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Window",
-                      "className": "Part",
-                      "guid": "12290",
-                      "children": [
-                        {
-                          "name": "Highlight",
-                          "className": "Highlight",
-                          "guid": "12077"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Window",
-                      "className": "Part",
-                      "guid": "12291",
+                      "guid": "12313",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1204,7 +1311,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12292",
+                      "guid": "12314",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1216,19 +1323,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12293",
-                      "children": [
-                        {
-                          "name": "Highlight",
-                          "className": "Highlight",
-                          "guid": "12080"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Window",
-                      "className": "Part",
-                      "guid": "12294",
+                      "guid": "12316",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1240,7 +1335,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12295",
+                      "guid": "12317",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1252,7 +1347,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12296",
+                      "guid": "12318",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1264,7 +1359,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12297",
+                      "guid": "12319",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1276,7 +1371,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12298",
+                      "guid": "12320",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1288,7 +1383,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12299",
+                      "guid": "12321",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1300,7 +1395,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12300",
+                      "guid": "12322",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1312,7 +1407,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12301",
+                      "guid": "12323",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1324,7 +1419,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12302",
+                      "guid": "12324",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1336,7 +1431,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12303",
+                      "guid": "12325",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1348,7 +1443,19 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12305",
+                      "guid": "12326",
+                      "children": [
+                        {
+                          "name": "Highlight",
+                          "className": "Highlight",
+                          "guid": "12091"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Window",
+                      "className": "Part",
+                      "guid": "12327",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1360,7 +1467,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12306",
+                      "guid": "12328",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1372,7 +1479,7 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12307",
+                      "guid": "12329",
                       "children": [
                         {
                           "name": "Highlight",
@@ -1384,12 +1491,48 @@
                     {
                       "name": "Window",
                       "className": "Part",
-                      "guid": "12308",
+                      "guid": "12331",
                       "children": [
                         {
                           "name": "Highlight",
                           "className": "Highlight",
-                          "guid": "12095"
+                          "guid": "12096"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Window",
+                      "className": "Part",
+                      "guid": "12332",
+                      "children": [
+                        {
+                          "name": "Highlight",
+                          "className": "Highlight",
+                          "guid": "12097"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Window",
+                      "className": "Part",
+                      "guid": "12333",
+                      "children": [
+                        {
+                          "name": "Highlight",
+                          "className": "Highlight",
+                          "guid": "12098"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Window",
+                      "className": "Part",
+                      "guid": "12334",
+                      "children": [
+                        {
+                          "name": "Highlight",
+                          "className": "Highlight",
+                          "guid": "12099"
                         }
                       ]
                     }
@@ -1398,49 +1541,49 @@
                 {
                   "name": "Window Wall",
                   "className": "UnionOperation",
-                  "guid": "12389"
+                  "guid": "12418"
                 }
               ]
             },
             {
               "name": "HouseInterior",
               "className": "Folder",
-              "guid": "11999",
+              "guid": "12000",
               "children": [
                 {
                   "name": "Bed",
                   "className": "Model",
-                  "guid": "12180",
+                  "guid": "12193",
                   "children": [
                     {
                       "name": "Cube",
                       "className": "MeshPart",
-                      "guid": "12111"
+                      "guid": "12116"
                     },
                     {
                       "name": "pillow_B",
                       "className": "MeshPart",
-                      "guid": "12112"
+                      "guid": "12117"
                     },
                     {
                       "name": "Sleeping Chungy",
                       "className": "Model",
-                      "guid": "12181",
+                      "guid": "12194",
                       "children": [
                         {
                           "name": "Body Colors",
                           "className": "BodyColors",
-                          "guid": "11984"
+                          "guid": "11985"
                         },
                         {
                           "name": "Head",
                           "className": "Part",
-                          "guid": "12310",
+                          "guid": "12336",
                           "children": [
                             {
                               "name": "face",
                               "className": "Decal",
-                              "guid": "11992"
+                              "guid": "11993"
                             },
                             {
                               "name": "FaceCenterAttachment",
@@ -1465,31 +1608,31 @@
                             {
                               "name": "Mesh",
                               "className": "SpecialMesh",
-                              "guid": "12350"
+                              "guid": "12378"
                             }
                           ]
                         },
                         {
                           "name": "Humanoid",
                           "className": "Humanoid",
-                          "guid": "12099"
+                          "guid": "12103"
                         },
                         {
                           "name": "HumanoidRootPart",
                           "className": "Part",
-                          "guid": "12309",
+                          "guid": "12335",
                           "children": [
                             {
                               "name": "RootJoint",
                               "className": "Motor6D",
-                              "guid": "12203"
+                              "guid": "12228"
                             }
                           ]
                         },
                         {
                           "name": "Left Arm",
                           "className": "Part",
-                          "guid": "12314",
+                          "guid": "12340",
                           "children": [
                             {
                               "name": "LeftShoulderAttachment",
@@ -1501,12 +1644,12 @@
                         {
                           "name": "Left Leg",
                           "className": "Part",
-                          "guid": "12315"
+                          "guid": "12341"
                         },
                         {
                           "name": "Right Arm",
                           "className": "Part",
-                          "guid": "12312",
+                          "guid": "12338",
                           "children": [
                             {
                               "name": "RightShoulderAttachment",
@@ -1518,12 +1661,12 @@
                         {
                           "name": "Right Leg",
                           "className": "Part",
-                          "guid": "12313"
+                          "guid": "12339"
                         },
                         {
                           "name": "Torso",
                           "className": "Part",
-                          "guid": "12311",
+                          "guid": "12337",
                           "children": [
                             {
                               "name": "BodyBackAttachment",
@@ -1538,12 +1681,12 @@
                             {
                               "name": "Left Hip",
                               "className": "Motor6D",
-                              "guid": "12207"
+                              "guid": "12232"
                             },
                             {
                               "name": "Left Shoulder",
                               "className": "Motor6D",
-                              "guid": "12204"
+                              "guid": "12229"
                             },
                             {
                               "name": "LeftCollarAttachment",
@@ -1553,7 +1696,7 @@
                             {
                               "name": "Neck",
                               "className": "Motor6D",
-                              "guid": "12206"
+                              "guid": "12231"
                             },
                             {
                               "name": "NeckAttachment",
@@ -1563,12 +1706,12 @@
                             {
                               "name": "Right Hip",
                               "className": "Motor6D",
-                              "guid": "12208"
+                              "guid": "12233"
                             },
                             {
                               "name": "Right Shoulder",
                               "className": "Motor6D",
-                              "guid": "12205"
+                              "guid": "12230"
                             },
                             {
                               "name": "RightCollarAttachment",
@@ -1578,7 +1721,7 @@
                             {
                               "name": "roblox",
                               "className": "Decal",
-                              "guid": "11993"
+                              "guid": "11994"
                             },
                             {
                               "name": "WaistBackAttachment",
@@ -1604,236 +1747,236 @@
                 {
                   "name": "DeskArea",
                   "className": "Folder",
-                  "guid": "12000",
+                  "guid": "12001",
                   "children": [
                     {
                       "name": "BlueRobot",
                       "className": "Model",
-                      "guid": "12188",
+                      "guid": "12201",
                       "children": [
                         {
                           "name": "Antenna-L",
                           "className": "MeshPart",
-                          "guid": "12150"
+                          "guid": "12155"
                         },
                         {
                           "name": "Antenna-R",
                           "className": "MeshPart",
-                          "guid": "12144"
+                          "guid": "12149"
                         },
                         {
                           "name": "Arm-L",
                           "className": "MeshPart",
-                          "guid": "12149"
+                          "guid": "12154"
                         },
                         {
                           "name": "Arm-R",
                           "className": "MeshPart",
-                          "guid": "12152"
+                          "guid": "12157"
                         },
                         {
                           "name": "Body",
                           "className": "MeshPart",
-                          "guid": "12148"
+                          "guid": "12153"
                         },
                         {
                           "name": "Brain",
                           "className": "MeshPart",
-                          "guid": "12151"
+                          "guid": "12156"
                         },
                         {
                           "name": "Face",
                           "className": "MeshPart",
-                          "guid": "12154",
+                          "guid": "12159",
                           "children": [
                             {
                               "name": "WeldConstraint",
                               "className": "WeldConstraint",
-                              "guid": "12395"
+                              "guid": "12424"
                             }
                           ]
                         },
                         {
                           "name": "Face-BG",
                           "className": "MeshPart",
-                          "guid": "12153"
+                          "guid": "12158"
                         },
                         {
                           "name": "Head",
                           "className": "MeshPart",
-                          "guid": "12146"
+                          "guid": "12151"
                         },
                         {
                           "name": "Leg-L",
                           "className": "MeshPart",
-                          "guid": "12145"
+                          "guid": "12150"
                         },
                         {
                           "name": "Leg-R",
                           "className": "MeshPart",
-                          "guid": "12147"
+                          "guid": "12152"
                         }
                       ]
                     },
                     {
                       "name": "Desk",
                       "className": "MeshPart",
-                      "guid": "12155",
+                      "guid": "12160",
                       "children": [
                         {
                           "name": "Highlight",
                           "className": "Highlight",
-                          "guid": "12096"
+                          "guid": "12100"
                         }
                       ]
                     },
                     {
                       "name": "DeskChair",
                       "className": "Model",
-                      "guid": "12184",
+                      "guid": "12197",
                       "children": [
                         {
                           "name": "Arm-L",
                           "className": "MeshPart",
-                          "guid": "12115"
+                          "guid": "12120"
                         },
                         {
                           "name": "Arm-R",
                           "className": "MeshPart",
-                          "guid": "12116"
+                          "guid": "12121"
                         },
                         {
                           "name": "Back Cushion",
                           "className": "MeshPart",
-                          "guid": "12117"
+                          "guid": "12122"
                         },
                         {
                           "name": "Back Support",
                           "className": "MeshPart",
-                          "guid": "12118"
+                          "guid": "12123"
                         },
                         {
                           "name": "Bottom Rod",
                           "className": "MeshPart",
-                          "guid": "12119"
+                          "guid": "12124"
                         },
                         {
                           "name": "Seat Cushion",
                           "className": "MeshPart",
-                          "guid": "12120"
+                          "guid": "12125"
                         },
                         {
                           "name": "Wheel",
                           "className": "MeshPart",
-                          "guid": "12121"
+                          "guid": "12126"
                         },
                         {
                           "name": "Wheel.001",
                           "className": "MeshPart",
-                          "guid": "12122"
+                          "guid": "12127"
                         },
                         {
                           "name": "Wheel.002",
                           "className": "MeshPart",
-                          "guid": "12123"
+                          "guid": "12128"
                         },
                         {
                           "name": "Wheel.003",
                           "className": "MeshPart",
-                          "guid": "12124"
+                          "guid": "12129"
                         },
                         {
                           "name": "Wheel.004",
                           "className": "MeshPart",
-                          "guid": "12125"
+                          "guid": "12130"
                         },
                         {
                           "name": "Wheels Connector",
                           "className": "MeshPart",
-                          "guid": "12126"
+                          "guid": "12131"
                         }
                       ]
                     },
                     {
                       "name": "DeskLamp",
                       "className": "Model",
-                      "guid": "12185",
+                      "guid": "12198",
                       "children": [
                         {
                           "name": "Button",
                           "className": "MeshPart",
-                          "guid": "12127"
+                          "guid": "12132"
                         },
                         {
                           "name": "Cylinder",
                           "className": "MeshPart",
-                          "guid": "12128"
+                          "guid": "12133"
                         },
                         {
                           "name": "Lamp Ball",
                           "className": "MeshPart",
-                          "guid": "12129"
+                          "guid": "12134"
                         },
                         {
                           "name": "LampLight",
                           "className": "MeshPart",
-                          "guid": "12130"
+                          "guid": "12135"
                         },
                         {
                           "name": "Lighting",
                           "className": "Part",
-                          "guid": "12317",
+                          "guid": "12343",
                           "children": [
                             {
                               "name": "SurfaceLight",
                               "className": "SurfaceLight",
-                              "guid": "12371"
+                              "guid": "12399"
                             }
                           ]
                         },
                         {
                           "name": "Part",
                           "className": "Part",
-                          "guid": "12316"
+                          "guid": "12342"
                         }
                       ]
                     },
                     {
                       "name": "Keyboard",
                       "className": "Model",
-                      "guid": "12186",
+                      "guid": "12199",
                       "children": [
                         {
                           "name": "Frame",
                           "className": "MeshPart",
-                          "guid": "12131"
+                          "guid": "12136"
                         },
                         {
                           "name": "Keys",
                           "className": "MeshPart",
-                          "guid": "12132"
+                          "guid": "12137"
                         }
                       ]
                     },
                     {
                       "name": "Mini Me",
                       "className": "Model",
-                      "guid": "12189",
+                      "guid": "12202",
                       "children": [
                         {
                           "name": "Body Colors",
                           "className": "BodyColors",
-                          "guid": "11985"
+                          "guid": "11986"
                         },
                         {
                           "name": "Head",
                           "className": "Part",
-                          "guid": "12321",
+                          "guid": "12347",
                           "children": [
                             {
                               "name": "face",
                               "className": "Decal",
-                              "guid": "11996"
+                              "guid": "11997"
                             },
                             {
                               "name": "FaceCenterAttachment",
@@ -1858,31 +2001,31 @@
                             {
                               "name": "Mesh",
                               "className": "SpecialMesh",
-                              "guid": "12351"
+                              "guid": "12379"
                             }
                           ]
                         },
                         {
                           "name": "Humanoid",
                           "className": "Humanoid",
-                          "guid": "12100"
+                          "guid": "12104"
                         },
                         {
                           "name": "HumanoidRootPart",
                           "className": "Part",
-                          "guid": "12323",
+                          "guid": "12349",
                           "children": [
                             {
                               "name": "RootJoint",
                               "className": "Motor6D",
-                              "guid": "12214"
+                              "guid": "12239"
                             }
                           ]
                         },
                         {
                           "name": "Left Arm",
                           "className": "Part",
-                          "guid": "12319",
+                          "guid": "12345",
                           "children": [
                             {
                               "name": "LeftShoulderAttachment",
@@ -1894,12 +2037,12 @@
                         {
                           "name": "Left Leg",
                           "className": "Part",
-                          "guid": "12320"
+                          "guid": "12346"
                         },
                         {
                           "name": "Right Arm",
                           "className": "Part",
-                          "guid": "12322",
+                          "guid": "12348",
                           "children": [
                             {
                               "name": "RightShoulderAttachment",
@@ -1911,12 +2054,12 @@
                         {
                           "name": "Right Leg",
                           "className": "Part",
-                          "guid": "12324"
+                          "guid": "12350"
                         },
                         {
                           "name": "Torso",
                           "className": "Part",
-                          "guid": "12318",
+                          "guid": "12344",
                           "children": [
                             {
                               "name": "BodyBackAttachment",
@@ -1931,12 +2074,12 @@
                             {
                               "name": "Left Hip",
                               "className": "Motor6D",
-                              "guid": "12213"
+                              "guid": "12238"
                             },
                             {
                               "name": "Left Shoulder",
                               "className": "Motor6D",
-                              "guid": "12209"
+                              "guid": "12234"
                             },
                             {
                               "name": "LeftCollarAttachment",
@@ -1946,7 +2089,7 @@
                             {
                               "name": "Neck",
                               "className": "Motor6D",
-                              "guid": "12210"
+                              "guid": "12235"
                             },
                             {
                               "name": "NeckAttachment",
@@ -1956,12 +2099,12 @@
                             {
                               "name": "Right Hip",
                               "className": "Motor6D",
-                              "guid": "12211"
+                              "guid": "12236"
                             },
                             {
                               "name": "Right Shoulder",
                               "className": "Motor6D",
-                              "guid": "12212"
+                              "guid": "12237"
                             },
                             {
                               "name": "RightCollarAttachment",
@@ -1971,7 +2114,7 @@
                             {
                               "name": "roblox",
                               "className": "Decal",
-                              "guid": "11995"
+                              "guid": "11996"
                             },
                             {
                               "name": "WaistBackAttachment",
@@ -1995,98 +2138,98 @@
                     {
                       "name": "Mouse",
                       "className": "Model",
-                      "guid": "12183",
+                      "guid": "12196",
                       "children": [
                         {
                           "name": "Cube",
                           "className": "MeshPart",
-                          "guid": "12114"
+                          "guid": "12119"
                         }
                       ]
                     },
                     {
                       "name": "MousePad",
                       "className": "Model",
-                      "guid": "12182",
+                      "guid": "12195",
                       "children": [
                         {
                           "name": "Cube",
                           "className": "MeshPart",
-                          "guid": "12113"
+                          "guid": "12118"
                         }
                       ]
                     },
                     {
                       "name": "RedRobot",
                       "className": "Model",
-                      "guid": "12187",
+                      "guid": "12200",
                       "children": [
                         {
                           "name": "Antenna-L",
                           "className": "MeshPart",
-                          "guid": "12141"
+                          "guid": "12146"
                         },
                         {
                           "name": "Antenna-R",
                           "className": "MeshPart",
-                          "guid": "12133"
+                          "guid": "12138"
                         },
                         {
                           "name": "Arm-L",
                           "className": "MeshPart",
-                          "guid": "12140"
+                          "guid": "12145"
                         },
                         {
                           "name": "Arm-R",
                           "className": "MeshPart",
-                          "guid": "12143"
+                          "guid": "12148"
                         },
                         {
                           "name": "Body",
                           "className": "MeshPart",
-                          "guid": "12139"
+                          "guid": "12144"
                         },
                         {
                           "name": "Brain",
                           "className": "MeshPart",
-                          "guid": "12142"
+                          "guid": "12147"
                         },
                         {
                           "name": "Face",
                           "className": "MeshPart",
-                          "guid": "12138",
+                          "guid": "12143",
                           "children": [
                             {
                               "name": "WeldConstraint",
                               "className": "WeldConstraint",
-                              "guid": "12394"
+                              "guid": "12423"
                             }
                           ]
                         },
                         {
                           "name": "Face-BG",
                           "className": "MeshPart",
-                          "guid": "12135"
+                          "guid": "12140"
                         },
                         {
                           "name": "Head",
                           "className": "MeshPart",
-                          "guid": "12136"
+                          "guid": "12141"
                         },
                         {
                           "name": "Leg-L",
                           "className": "MeshPart",
-                          "guid": "12134"
+                          "guid": "12139"
                         },
                         {
                           "name": "Leg-R",
                           "className": "MeshPart",
-                          "guid": "12137"
+                          "guid": "12142"
                         },
                         {
                           "name": "PackageLink",
                           "className": "PackageLink",
-                          "guid": "12278"
+                          "guid": "12303"
                         }
                       ]
                     }
@@ -2095,12 +2238,12 @@
                 {
                   "name": "SpawnArea",
                   "className": "SpawnLocation",
-                  "guid": "12349",
+                  "guid": "12377",
                   "children": [
                     {
                       "name": "Decal",
                       "className": "Decal",
-                      "guid": "11994"
+                      "guid": "11995"
                     }
                   ]
                 }
@@ -2109,32 +2252,32 @@
             {
               "name": "Outside ",
               "className": "Folder",
-              "guid": "12001",
+              "guid": "12002",
               "children": [
                 {
                   "name": "Tree",
                   "className": "Model",
-                  "guid": "12191",
+                  "guid": "12204",
                   "children": [
                     {
                       "name": "Bush1",
                       "className": "MeshPart",
-                      "guid": "12156"
+                      "guid": "12161"
                     },
                     {
                       "name": "Bush2",
                       "className": "MeshPart",
-                      "guid": "12157"
+                      "guid": "12162"
                     },
                     {
                       "name": "Highlight",
                       "className": "Highlight",
-                      "guid": "12097"
+                      "guid": "12101"
                     },
                     {
                       "name": "TreeBranch",
                       "className": "MeshPart",
-                      "guid": "12158"
+                      "guid": "12163"
                     }
                   ]
                 }
@@ -2143,101 +2286,101 @@
             {
               "name": "Realistic Lighting",
               "className": "Model",
-              "guid": "12190",
+              "guid": "12203",
               "children": [
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12325",
+                  "guid": "12351",
                   "children": [
                     {
                       "name": "SurfaceLight",
                       "className": "SurfaceLight",
-                      "guid": "12372"
+                      "guid": "12400"
                     }
                   ]
                 },
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12326",
+                  "guid": "12352",
                   "children": [
                     {
                       "name": "SurfaceLight",
                       "className": "SurfaceLight",
-                      "guid": "12373"
+                      "guid": "12401"
                     }
                   ]
                 },
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12327",
+                  "guid": "12353",
                   "children": [
                     {
                       "name": "SurfaceLight",
                       "className": "SurfaceLight",
-                      "guid": "12374"
+                      "guid": "12402"
                     }
                   ]
                 },
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12328",
+                  "guid": "12354",
                   "children": [
                     {
                       "name": "SurfaceLight",
                       "className": "SurfaceLight",
-                      "guid": "12375"
+                      "guid": "12403"
                     }
                   ]
                 },
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12329",
+                  "guid": "12355",
                   "children": [
                     {
                       "name": "SurfaceLight",
                       "className": "SurfaceLight",
-                      "guid": "12376"
+                      "guid": "12404"
                     }
                   ]
                 },
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12330",
+                  "guid": "12356",
                   "children": [
                     {
                       "name": "SurfaceLight",
                       "className": "SurfaceLight",
-                      "guid": "12377"
+                      "guid": "12405"
                     }
                   ]
                 },
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12331",
+                  "guid": "12357",
                   "children": [
                     {
                       "name": "SurfaceLight",
                       "className": "SurfaceLight",
-                      "guid": "12378"
+                      "guid": "12406"
                     }
                   ]
                 },
                 {
                   "name": "Part",
                   "className": "Part",
-                  "guid": "12332",
+                  "guid": "12358",
                   "children": [
                     {
                       "name": "SurfaceLight",
                       "className": "SurfaceLight",
-                      "guid": "12379"
+                      "guid": "12407"
                     }
                   ]
                 }
@@ -2248,7 +2391,7 @@
         {
           "name": "Terrain",
           "className": "Terrain",
-          "guid": "12381"
+          "guid": "12409"
         }
       ]
     }
