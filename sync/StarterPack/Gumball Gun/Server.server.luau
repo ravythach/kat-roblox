@@ -11,7 +11,7 @@ local MAX_BULLET_SPREAD_ANGLE = 2											-- Default: 4; keep changes small. T
 local MAX_BOUNCES = 5														-- Maximum amount of times the bullet can bounce (only works with USE_PIERCE)
 local TERMINATE_VELOCITY = 5												-- Maximum velocity of bullet before it gets destroyed
 local USE_PIERCE = true														-- Use ray pierce for bouncing effect
-local DEBUG = true															-- Show bullet trails for debug purposes
+local DEBUG = false															-- Show bullet trails for debug purposes
 
 local IMPACT_SOUND_ID = 102001720788654	-- Impact sound for gun
 local GUMBALL_COLORS = {
