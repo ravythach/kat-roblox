@@ -5,7 +5,6 @@ local UserInputService = game:GetService("UserInputService")
 local WALK_SPEED = 20
 local SPRINT_SPEED = 50
 
-
 -- Listen for whenever the player's character spawns or respawns
 localPlayer.CharacterAdded:Connect(function(character)
 	local humanoid = character:WaitForChild("Humanoid")

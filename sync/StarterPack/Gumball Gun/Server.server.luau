@@ -1,18 +1,18 @@
 --|| CONSTANTS TO PLAYTEST ||--
 local FIRE_DELAY = 0.15														-- Fire rate or cooldown between each bullet
-local BULLET_SPEED = 90
-local BULLET_MAXDIST = 1000													-- Bullet max distance when not touching any parts
+local BULLET_SPEED = 140
+local BULLET_MAXDIST = 250													-- Bullet max distance when not touching any parts
 local BULLET_SIZE = Vector3.new(1, 1, 1)
-local BULLET_GRAVITY = Vector3.new(0, -workspace.Gravity, 0) * (0.9)   		-- Modify second portion to change vertical gravity
+local DEFAULT_GRAVITY = Vector3.new(0, -workspace.Gravity, 0)
+local BULLET_GRAVITY = DEFAULT_GRAVITY * 0  								-- Multiplier for gravity
 local BULLET_STATIC = true													-- Bullet will be frozen in place and not rotate if set to true
 local BOUNCE_DECAY = 0.9													-- Default: 1 -- No energy loss; Loses velocity after each bounce if lower than 1
 local MIN_BULLET_SPREAD_ANGLE = 0											-- Default: 0; keep changes small. The least accurate the bullet can be. 0 means straight forward. Generally you want to keep this at 0 so there's at least some chance of a 100% accurate shot.
-local MAX_BULLET_SPREAD_ANGLE = 2											-- Default: 4; keep changes small. The most accurate the bullet can be. 0 means straight forward. Always MAX > MIN. 90 may allow gun to shoot sideways; 180 backwards. Exceeding 180 does nothing
-local MAX_BOUNCES = 3														-- Maximum amount of times the bullet can bounce (only works with USE_PIERCE)
+local MAX_BULLET_SPREAD_ANGLE = 0											-- Default: 4; keep changes small. The most accurate the bullet can be. 0 means straight forward. Always MAX > MIN. 90 may allow gun to shoot sideways; 180 backwards. Exceeding 180 does nothing
+local MAX_BOUNCES = 0														-- Maximum amount of times the bullet can bounce (only works with USE_PIERCE)
 local TERMINATE_VELOCITY = 5												-- Minimum velocity of bullet it needs to reach before it gets destroyed
 local USE_PIERCE = true														-- Use ray pierce for enabling bouncing effect
 local DEBUG = false															-- Show bullet trails for debug purposes
-
 local IMPACT_SOUND_ID = 102001720788654	-- Impact sound for gun
 local GUMBALL_COLORS = {
 	Color3.fromRGB(255, 75, 90),   -- Red
