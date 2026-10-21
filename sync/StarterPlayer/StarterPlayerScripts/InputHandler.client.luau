@@ -7,8 +7,8 @@ local aimFOVEvent = script.Parent.PlayerCamera:WaitForChild("AimFOV")
 --[[
 	INPUTS ADDED
 	---
-	MouseButton2: Aim Down Sight
 	LeftShift: Sprint
+	MouseButton2: Aim
 ]] 
 
 UIS.InputBegan:Connect(function(input, gpe)
