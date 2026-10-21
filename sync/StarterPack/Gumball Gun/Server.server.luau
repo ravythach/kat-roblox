@@ -9,11 +9,11 @@ local BULLET_STATIC = true													-- Bullet will be frozen in place and not
 local BOUNCE_DECAY = 0.9													-- Default: 1 -- No energy loss; Loses velocity after each bounce if lower than 1
 local MIN_BULLET_SPREAD_ANGLE = 0											-- Default: 0; keep changes small. The least accurate the bullet can be. 0 means straight forward. Generally you want to keep this at 0 so there's at least some chance of a 100% accurate shot.
 local MAX_BULLET_SPREAD_ANGLE = 0											-- Default: 4; keep changes small. The most accurate the bullet can be. 0 means straight forward. Always MAX > MIN. 90 may allow gun to shoot sideways; 180 backwards. Exceeding 180 does nothing
-local MAX_BOUNCES = 0														-- Maximum amount of times the bullet can bounce (only works with USE_PIERCE)
+local MAX_BOUNCES = 1														-- Maximum amount of times the bullet can bounce (only works with USE_PIERCE)
 local TERMINATE_VELOCITY = 5												-- Minimum velocity of bullet it needs to reach before it gets destroyed
 local USE_PIERCE = true														-- Use ray pierce for enabling bouncing effect
 local DEBUG = false															-- Show bullet trails for debug purposes
-local IMPACT_SOUND_ID = 102001720788654	-- Impact sound for gun
+local IMPACT_SOUND_ID = 125967527987624										-- Impact sound for gun [Handle Id to change firesound]
 local GUMBALL_COLORS = {
 	Color3.fromRGB(255, 75, 90),   -- Red
 	Color3.fromRGB(70, 190, 255),  -- Blue
@@ -21,6 +21,10 @@ local GUMBALL_COLORS = {
 	Color3.fromRGB(120, 230, 100), -- Green
 	Color3.fromRGB(190, 110, 255), -- Purple
 	Color3.fromRGB(255, 145, 200), -- Pink
+	Color3.fromRGB(255, 150, 60),  -- Orange
+	Color3.fromRGB(255, 255, 255), -- White
+	Color3.fromRGB(80, 220, 255),  -- Sky Blue
+	Color3.fromRGB(60, 255, 220),  -- Turquoise
 }
 
 --|| LOCAL VARIABLES ||--
@@ -71,7 +75,6 @@ castBehavior.MaxDistance = BULLET_MAXDIST
 castBehavior.HighFidelityBehavior = FastCast.HighFidelityBehavior.Default
 castBehavior.AutoIgnoreContainer = false
 castBehavior.CosmeticBulletContainer = bulletsFolder
-castBehavior.CosmeticBulletTemplate = bulletTemplate
 castBehavior.CosmeticBulletProvider = bulletCache
 FastCast.VisualizeCasts = DEBUG
 
@@ -80,14 +83,6 @@ FastCast.VisualizeCasts = DEBUG
 
 -- Gun sound when fired
 local function PlayFireSound()
-	local NewSound = fireSound:Clone()
-	NewSound.Parent = tool.Handle
-	NewSound:Play()
-	Debris:AddItem(NewSound, NewSound.TimeLength)
-end
-
--- Gun sound after it hits something or bounces
-local function PlayImpactSound()
 	local NewSound = fireSound:Clone()
 	NewSound.Parent = tool.Handle
 	NewSound:Play()
@@ -166,7 +161,7 @@ function onRayPierced(cast, raycastResult, segmentVelocity, bullet)
 	
 	local position = raycastResult.Position
 	local normal = raycastResult.Normal
-	local sound = bullet:FindFirstChild("ImpactSound")
+	local impactSound = bullet:FindFirstChild("ImpactSound")
 
 	local newNormal = Reflect(normal, segmentVelocity.Unit)
 	cast:SetVelocity(newNormal * segmentVelocity.Magnitude * BOUNCE_DECAY)
@@ -174,12 +169,12 @@ function onRayPierced(cast, raycastResult, segmentVelocity, bullet)
 	cast:SetPosition(position)
 	-- Use the line above to reset the position to where it was when the pierce was registered
 	
-	if sound then
-		sound:Play()
+	if impactSound then
+		impactSound:Play()
 	end
 end
 
--- After the bullet hits something
+-- What to do with bullet after the bullet hits something
 function onRayTerminated(cast)
 	local bullet = cast.RayInfo.CosmeticBulletObject
 	if bullet ~= nil then

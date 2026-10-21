@@ -2,39 +2,35 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Packages = ReplicatedStorage:WaitForChild("Packages")
 local CameraService = require(Packages.CameraService)
-------------------
-local UserInputService = game:GetService("UserInputService")
-UserInputService.MouseIconEnabled = false
+local playerConfig = require(script.Parent.Modules.PlayerConfig)
+-------------------
 
-local CURRENT_ZOOM = 9 -- DEFAULT: 10
-local CURRENT_FOV = 70 -- DEFAULT: 70
+-- Player Camera Properties
+local playerZoom = playerConfig.Zoom
+local playerFOV = playerConfig.FOV
+local playerSprintFOV = playerConfig.SprintFOV
+local playerAimFOV = playerConfig.AimFOV
+local playerOffset = playerConfig.Offset
 
 CameraService:SetCameraView("ShiftLock")
+CameraService:Change("Zoom", playerZoom)
+CameraService:Change("MinZoom", playerZoom)
+CameraService:Change("MaxZoom", playerZoom)
+CameraService:Change("Offset", playerOffset)
 
--- Changed Camera Properties
-CameraService:Change("Zoom", CURRENT_ZOOM)
-CameraService:Change("MinZoom", CURRENT_ZOOM)
-CameraService:Change("MaxZoom", CURRENT_ZOOM)
-CameraService:Change("Offset", CFrame.new(2.25, 0.6, 3))
+-- Events --
+local normalFOVEvent = script:WaitForChild("NormalFOV")
+local sprintFOVEvent = script:WaitForChild("SprintFOV")
+local aimFOVEvent = script:WaitForChild("AimFOV")
 
--- ADS Camera Effect (Right-Click)
-UserInputService.InputBegan:Connect(function(input, gpe)
-	if gpe or input.UserInputType ~= Enum.UserInputType.MouseButton2 then return end
-	CameraService:ChangeFOV(CURRENT_FOV - 25)
+normalFOVEvent.Event:Connect(function()
+	CameraService:ChangeFOV(playerFOV)
 end)
 
-UserInputService.InputEnded:Connect(function(input)
-	if input.UserInputType ~= Enum.UserInputType.MouseButton2 then return end
-	CameraService:ChangeFOV(CURRENT_FOV)
+sprintFOVEvent.Event:Connect(function()
+	CameraService:ChangeFOV(playerSprintFOV)
 end)
 
--- Sprint Camera Effect (Left-Shift)
-UserInputService.InputBegan:Connect(function(input, gpe)
-	if gpe or input.KeyCode ~= Enum.KeyCode.LeftShift then return end
-	CameraService:ChangeFOV(CURRENT_FOV + 30)
-end)
-
-UserInputService.InputEnded:Connect(function(input)
-	if input.KeyCode ~= Enum.KeyCode.LeftShift then return end
-	CameraService:ChangeFOV(CURRENT_FOV)
+aimFOVEvent.Event:Connect(function()
+	CameraService:ChangeFOV(playerAimFOV)
 end)
