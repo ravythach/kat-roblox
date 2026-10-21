@@ -8,11 +8,12 @@ UserInputService.MouseIconEnabled = false
 
 CameraService:SetCameraView("ShiftLock")
 
--- Camera Zoom Settings
-CameraService.Zoom = 9.5
-CameraService.MaxZoom = CameraService.Zoom
-CameraService.MinZoom = CameraService.Zoom
-print(`Camera Current Zoom: {CameraService.Zoom}`)
+-- Modified Camera Properties
+CameraService:Change("Zoom", 9.5)
+CameraService:Change("MinZoom", 9.5)
+CameraService:Change("MaxZoom", 9.5)
+CameraService:Change("Offset", CFrame.new(1.75, 0.5, 0.75))
+CameraService:TiltAllAxes(0, 0, 0)
 
 -- ADS Camera Effect (Right-Click)
 UserInputService.InputBegan:Connect(function(input, gpe)
@@ -22,7 +23,7 @@ end)
 
 UserInputService.InputEnded:Connect(function(input)
 	if input.UserInputType ~= Enum.UserInputType.MouseButton2 then return end
-	CameraService:ChangeFOV(70)
+	CameraService:ChangeFOV(75)
 end)
 
 
@@ -34,5 +35,5 @@ end)
 
 UserInputService.InputEnded:Connect(function(input)
 	if input.KeyCode ~= Enum.KeyCode.LeftShift then return end
-	CameraService:ChangeFOV(70)
+	CameraService:ChangeFOV(75)
 end)
