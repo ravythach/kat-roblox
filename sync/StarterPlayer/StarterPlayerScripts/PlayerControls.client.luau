@@ -12,7 +12,9 @@ localPlayer.CharacterAdded:Connect(function(character)
 	
 	UserInputService.InputBegan:Connect(function(input, gpe)
 		if gpe or input.KeyCode ~= Enum.KeyCode.LeftShift then return end
-		humanoid.WalkSpeed = SPRINT_SPEED
+		if not UserInputService:IsKeyDown(Enum.KeyCode.S) then
+			humanoid.WalkSpeed = SPRINT_SPEED
+		end
 	end)
 
 	UserInputService.InputEnded:Connect(function(input)
