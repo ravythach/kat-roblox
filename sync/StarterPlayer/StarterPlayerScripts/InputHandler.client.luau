@@ -1,35 +1,60 @@
 local UIS = game:GetService("UserInputService")
-local walkEvent = script.Parent.PlayerActions:WaitForChild("Walk")
 local sprintEvent = script.Parent.PlayerActions:WaitForChild("Sprint")
-local normalFOVEvent = script.Parent.PlayerCamera:WaitForChild("NormalFOV")
-local aimFOVEvent = script.Parent.PlayerCamera:WaitForChild("AimFOV")
+local cancelSprintEvent = script.Parent.PlayerActions:WaitForChild("CancelSprint")
+local aimEvent = script.Parent.PlayerActions:WaitForChild("Aim")
+local cancelAimEvent = script.Parent.PlayerActions:WaitForChild("CancelAim")
 
 --[[
+
 	INPUTS ADDED
 	---
 	LeftShift: Sprint
 	MouseButton2: Aim
-]] 
+	
+--]]
 
 UIS.InputBegan:Connect(function(input, gpe)
 	if gpe then return end
 	
-	if input.KeyCode == Enum.KeyCode.LeftShift then
-		sprintEvent:Fire()
+	-- Left-Shift
+	if input.KeyCode == Enum.KeyCode.LeftShift then	
+		-- Sprint will only work if holding forward
+		if UIS:IsKeyDown(Enum.KeyCode.W) then
+			-- Sprint will cancel aiming
+			cancelAimEvent:Fire()
+			sprintEvent:Fire()
+		end
 	end
 	
+	-- Forward
+	if input.KeyCode == Enum.KeyCode.W then
+		-- Sprint will toggle if left-shift is held
+		if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then
+			sprintEvent:Fire()
+		end
+	end
+	
+	-- Right-Click	
 	if input.UserInputType == Enum.UserInputType.MouseButton2 then
-		aimFOVEvent:Fire()
+		-- Aim will cancel sprinting
+		cancelSprintEvent:Fire()
+		aimEvent:Fire()
 	end
 end)
 
-
 UIS.InputEnded:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.LeftShift then
-		walkEvent:Fire()
+		-- Keeps sprinting if player is still holding forward
+		if not UIS:IsKeyDown(Enum.KeyCode.W) then
+			cancelSprintEvent:Fire()
+		end
+	end
+	
+	if input.KeyCode == Enum.KeyCode.W then
+		cancelSprintEvent:Fire()
 	end
 	
 	if input.UserInputType == Enum.UserInputType.MouseButton2 then
-		normalFOVEvent:Fire()
+		cancelAimEvent:Fire()
 	end
 end)
