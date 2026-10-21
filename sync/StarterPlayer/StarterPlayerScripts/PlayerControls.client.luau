@@ -11,9 +11,14 @@ localPlayer.CharacterAdded:Connect(function(character)
 	local humanoid = character:WaitForChild("Humanoid")
 	
 	UserInputService.InputBegan:Connect(function(input, gpe)
-		if gpe or input.KeyCode ~= Enum.KeyCode.LeftShift then return end
-		if not UserInputService:IsKeyDown(Enum.KeyCode.S) then
-			humanoid.WalkSpeed = SPRINT_SPEED
+		local keysPressed = UserInputService:GetKeysPressed()
+		if input.KeyCode == Enum.KeyCode.LeftShift then
+			print(keysPressed)
+			for _, key in ipairs(keysPressed) do
+				if key.KeyCode == Enum.KeyCode.LeftShift then continue end
+				if key.KeyCode ~= Enum.KeyCode.W then break end
+				humanoid.WalkSpeed = SPRINT_SPEED
+			end
 		end
 	end)
 
