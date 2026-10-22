@@ -15,9 +15,11 @@ local cancelAimEvent = script:WaitForChild("CancelAim")
 local changeFOVEvent = script.Parent.PlayerCamera:WaitForChild("ChangeFOV")
 
 sprintEvent.Event:Connect(function()
-	humanoid.WalkSpeed += PlayerConfig.SprintBoost
-	changeFOVEvent:Fire(PlayerConfig.SprintFOV)
-	PlayerStates.IsSprinting = true
+	if not PlayerStates.IsSprinting then
+		humanoid.WalkSpeed += PlayerConfig.SprintBoost
+		changeFOVEvent:Fire(PlayerConfig.SprintFOV)
+		PlayerStates.IsSprinting = true
+	end
 end)
 
 cancelSprintEvent.Event:Connect(function()
@@ -29,16 +31,16 @@ cancelSprintEvent.Event:Connect(function()
 end)
 
 aimEvent.Event:Connect(function()
-	--humanoid.WalkSpeed = PlayerConfig.WalkSpeed
-	changeFOVEvent:Fire(PlayerConfig.AimFOV)
-	PlayerStates.IsAiming = true
+	if not PlayerStates.IsAiming then
+		changeFOVEvent:Fire(PlayerConfig.AimFOV)
+		PlayerStates.IsAiming = true
+	end
 end)
 
 cancelAimEvent.Event:Connect(function()
 	if PlayerStates.IsAiming then
-		PlayerStates.IsAiming = false
-		--humanoid.WalkSpeed = PlayerConfig.WalkSpeed
 		changeFOVEvent:Fire(PlayerConfig.FOV)
+		PlayerStates.IsAiming = false
 	end
 end)
 
