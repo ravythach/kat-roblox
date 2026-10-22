@@ -35,7 +35,7 @@ sugarRushEvent.OnServerEvent:Connect(function(player)
 	
 	-- Ability Effects
 	PlayerStates.SetSugarRushActive(true)
-	humanoid.WalkSpeed += SPEED_BOOST
+	humanoid.WalkSpeed = PlayerStates.UpdateCurrentSpeed(SPEED_BOOST, "add")
 	toggleTrail(character, true)
 	sugarRushSound:Play()
 	
@@ -48,7 +48,7 @@ sugarRushEvent.OnServerEvent:Connect(function(player)
 	-- End Ability
 	if character and character.Parent then
 		toggleTrail(character, false)
-		humanoid.WalkSpeed -= SPEED_BOOST
+		humanoid.WalkSpeed = PlayerStates.UpdateCurrentSpeed(SPEED_BOOST, "sub")
 		sugarRushSound:Stop()
 		print("Sugar Rush has ended, noobert! 😾")
 	end

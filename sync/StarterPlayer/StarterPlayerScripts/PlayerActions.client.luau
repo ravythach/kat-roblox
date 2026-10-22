@@ -7,16 +7,20 @@ local PlayerConfig = require(RS.Modules.PlayerConfig)
 local PlayerStates = require(RS.Modules.PlayerStates)
 ------------------
 
--- EVENTS --
+-- Bindable Events
 local sprintEvent = script:WaitForChild("Sprint")
 local cancelSprintEvent = script:WaitForChild("CancelSprint")
 local aimEvent = script:WaitForChild("Aim")
 local cancelAimEvent = script:WaitForChild("CancelAim")
 local changeFOVEvent = script.Parent.PlayerCamera:WaitForChild("ChangeFOV")
 
+-- Remote Events
+local sprintRemoteEvent = RS.PlayerEvents:WaitForChild("Sprint")
+local cancelSprintRemoteEvent = RS.PlayerEvents:WaitForChild("CancelSprint")
+
 sprintEvent.Event:Connect(function()
 	if not PlayerStates.IsSprinting then
-		humanoid.WalkSpeed += PlayerConfig.SprintBoost
+		sprintRemoteEvent:FireServer()
 		changeFOVEvent:Fire(PlayerConfig.SprintFOV)
 		PlayerStates.IsSprinting = true
 	end
@@ -24,9 +28,9 @@ end)
 
 cancelSprintEvent.Event:Connect(function()
 	if PlayerStates.IsSprinting then
-		PlayerStates.IsSprinting = false
-		humanoid.WalkSpeed -= PlayerConfig.SprintBoost
+		cancelSprintRemoteEvent:FireServer()
 		changeFOVEvent:Fire(PlayerConfig.FOV)
+		PlayerStates.IsSprinting = false
 	end
 end)
 

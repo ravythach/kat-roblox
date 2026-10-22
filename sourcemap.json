@@ -232,6 +232,23 @@
               ]
             }
           ]
+        },
+        {
+          "name": "PlayerEvents",
+          "className": "Folder",
+          "guid": "4649279",
+          "children": [
+            {
+              "name": "CancelSprint",
+              "className": "RemoteEvent",
+              "guid": "4649453"
+            },
+            {
+              "name": "Sprint",
+              "className": "RemoteEvent",
+              "guid": "4649109"
+            }
+          ]
         }
       ]
     },
@@ -256,11 +273,19 @@
           ]
         },
         {
-          "name": "PlayerHandler",
+          "name": "PlayerActions",
+          "className": "Script",
+          "guid": "5609241",
+          "filePaths": [
+            "sync/ServerScriptService/PlayerActions.server.luau"
+          ]
+        },
+        {
+          "name": "PlayerInitializer",
           "className": "Script",
           "guid": "12492",
           "filePaths": [
-            "sync/ServerScriptService/PlayerHandler.server.luau"
+            "sync/ServerScriptService/PlayerInitializer.server.luau"
           ]
         }
       ]
