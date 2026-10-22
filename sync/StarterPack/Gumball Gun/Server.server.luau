@@ -16,15 +16,15 @@ local DEBUG = false															-- Show bullet trails for debug purposes
 local IMPACT_SOUND_ID = 125967527987624										-- Impact sound for gun [Handle Id to change firesound]
 local GUMBALL_COLORS = {
 	Color3.fromRGB(255, 75, 90),   -- Red
-	Color3.fromRGB(70, 190, 255),  -- Blue
+	Color3.fromRGB(255, 150, 60),  -- Orange
 	Color3.fromRGB(255, 220, 60),  -- Yellow
-	Color3.fromRGB(120, 230, 100), -- Green
+	Color3.fromRGB(66, 221, 38), 	-- Green
+	Color3.fromRGB(60, 255, 220),  -- Turquoise
+	Color3.fromRGB(80, 220, 255),  -- Sky Blue
+	Color3.fromRGB(53, 97, 255),  -- Blue
 	Color3.fromRGB(190, 110, 255), -- Purple
 	Color3.fromRGB(255, 145, 200), -- Pink
-	Color3.fromRGB(255, 150, 60),  -- Orange
 	Color3.fromRGB(255, 255, 255), -- White
-	Color3.fromRGB(80, 220, 255),  -- Sky Blue
-	Color3.fromRGB(60, 255, 220),  -- Turquoise
 }
 
 --|| LOCAL VARIABLES ||--

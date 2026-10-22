@@ -1,15 +1,19 @@
 local UIS = game:GetService("UserInputService")
+local RS = game:GetService("ReplicatedStorage")
 local sprintEvent = script.Parent.PlayerActions:WaitForChild("Sprint")
 local cancelSprintEvent = script.Parent.PlayerActions:WaitForChild("CancelSprint")
 local aimEvent = script.Parent.PlayerActions:WaitForChild("Aim")
 local cancelAimEvent = script.Parent.PlayerActions:WaitForChild("CancelAim")
+-- Ability Events
+local sugarRushEvent = RS.AbilityEvents:WaitForChild("SugarRush")
 
 --[[
 
 	INPUTS ADDED
-	---
-	LeftShift: Sprint
-	MouseButton2: Aim
+	------------
+	Left-Shift  | Sprint
+	Right-Click | Aim
+	Key: T 		| Ability 1 (Sugar Rush)
 	
 --]]
 
@@ -39,6 +43,11 @@ UIS.InputBegan:Connect(function(input, gpe)
 		-- Aim will cancel sprinting
 		cancelSprintEvent:Fire()
 		aimEvent:Fire()
+	end
+	
+	-- Key: T
+	if input.KeyCode == Enum.KeyCode.T then
+		sugarRushEvent:FireServer()
 	end
 end)
 

@@ -1,16 +1,16 @@
 -- DEPENDENCIES --
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Packages = ReplicatedStorage:WaitForChild("Packages")
+local RS = game:GetService("ReplicatedStorage")
+local Packages = RS:WaitForChild("Packages")
 local CameraService = require(Packages.CameraService)
-local playerConfig = require(script.Parent.Modules.PlayerConfig)
+local PlayerConfig = require(RS.Modules.PlayerConfig)
 -------------------
 
 -- Player Camera Properties
-local playerZoom = playerConfig.Zoom
-local playerFOV = playerConfig.FOV
-local playerSprintFOV = playerConfig.SprintFOV
-local playerAimFOV = playerConfig.AimFOV
-local playerOffset = playerConfig.Offset
+local playerZoom = PlayerConfig.Zoom
+local playerFOV = PlayerConfig.FOV
+local playerSprintFOV = PlayerConfig.SprintFOV
+local playerAimFOV = PlayerConfig.AimFOV
+local playerOffset = PlayerConfig.Offset
 
 CameraService:SetCameraView("ShiftLock")
 CameraService:Change("Zoom", playerZoom)

@@ -1,9 +1,10 @@
 -- DEPENDENCIES --
+local RS = game:GetService("ReplicatedStorage")
 local localPlayer = game:GetService("Players").LocalPlayer
 local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
-local playerConfig = require(script.Parent.Modules.PlayerConfig)
-local playerStates = require(script.Parent.Modules.PlayerStates)
+local PlayerConfig = require(RS.Modules.PlayerConfig)
+local PlayerStates = require(RS.Modules.PlayerStates)
 ------------------
 
 -- EVENTS --
@@ -14,30 +15,30 @@ local cancelAimEvent = script:WaitForChild("CancelAim")
 local changeFOVEvent = script.Parent.PlayerCamera:WaitForChild("ChangeFOV")
 
 sprintEvent.Event:Connect(function()
-	humanoid.WalkSpeed = playerConfig.SprintSpeed
-	changeFOVEvent:Fire(playerConfig.SprintFOV)
-	playerStates.IsSprinting = true
+	humanoid.WalkSpeed += PlayerConfig.SprintBoost
+	changeFOVEvent:Fire(PlayerConfig.SprintFOV)
+	PlayerStates.IsSprinting = true
 end)
 
 cancelSprintEvent.Event:Connect(function()
-	if playerStates.IsSprinting then
-		playerStates.IsSprinting = false
-		humanoid.WalkSpeed = playerConfig.WalkSpeed
-		changeFOVEvent:Fire(playerConfig.FOV)
+	if PlayerStates.IsSprinting then
+		PlayerStates.IsSprinting = false
+		humanoid.WalkSpeed -= PlayerConfig.SprintBoost
+		changeFOVEvent:Fire(PlayerConfig.FOV)
 	end
 end)
 
 aimEvent.Event:Connect(function()
-	humanoid.WalkSpeed = playerConfig.WalkSpeed
-	changeFOVEvent:Fire(playerConfig.AimFOV)
-	playerStates.IsAiming = true
+	--humanoid.WalkSpeed = PlayerConfig.WalkSpeed
+	changeFOVEvent:Fire(PlayerConfig.AimFOV)
+	PlayerStates.IsAiming = true
 end)
 
 cancelAimEvent.Event:Connect(function()
-	if playerStates.IsAiming then
-		playerStates.IsAiming = false
-		humanoid.WalkSpeed = playerConfig.WalkSpeed
-		changeFOVEvent:Fire(playerConfig.FOV)
+	if PlayerStates.IsAiming then
+		PlayerStates.IsAiming = false
+		--humanoid.WalkSpeed = PlayerConfig.WalkSpeed
+		changeFOVEvent:Fire(PlayerConfig.FOV)
 	end
 end)
 
