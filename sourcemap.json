@@ -55,6 +55,11 @@
               "guid": "860382",
               "children": [
                 {
+                  "name": "JumboGumboBall",
+                  "className": "Part",
+                  "guid": "10887481"
+                },
+                {
                   "name": "JumboGumboEvent",
                   "className": "RemoteEvent",
                   "guid": "860657"
@@ -72,14 +77,14 @@
                   "guid": "12870"
                 },
                 {
-                  "name": "RainbowTrail",
-                  "className": "Trail",
-                  "guid": "12957"
-                },
-                {
                   "name": "SugarRushEvent",
                   "className": "RemoteEvent",
                   "guid": "12854"
+                },
+                {
+                  "name": "SugarRushTrail",
+                  "className": "Trail",
+                  "guid": "12957"
                 }
               ]
             }
@@ -1100,7 +1105,31 @@
         {
           "name": "StarterCharacterScripts",
           "className": "StarterCharacterScripts",
-          "guid": "12874"
+          "guid": "12874",
+          "children": [
+            {
+              "name": "Abilities",
+              "className": "Folder",
+              "guid": "5041695",
+              "children": [
+                {
+                  "name": "SugarRush",
+                  "className": "Folder",
+                  "guid": "5041760",
+                  "children": [
+                    {
+                      "name": "AfterImage",
+                      "className": "LocalScript",
+                      "guid": "2333853",
+                      "filePaths": [
+                        "sync/StarterPlayer/StarterCharacterScripts/Abilities/SugarRush/AfterImage.client.luau"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "StarterPlayerScripts",

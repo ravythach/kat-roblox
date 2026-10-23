@@ -1,6 +1,6 @@
 local RS = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
-local sugarRushTrail = RS.Abilities.SugarRush:WaitForChild("RainbowTrail")
+local sugarRushTrail = RS.Abilities.SugarRush:WaitForChild("SugarRushTrail")
 
 Players.PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(function(character)
