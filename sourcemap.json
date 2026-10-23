@@ -50,6 +50,18 @@
           "guid": "12425",
           "children": [
             {
+              "name": "JumboGumbo",
+              "className": "Folder",
+              "guid": "860382",
+              "children": [
+                {
+                  "name": "JumboGumboEvent",
+                  "className": "RemoteEvent",
+                  "guid": "860657"
+                }
+              ]
+            },
+            {
               "name": "SugarRush",
               "className": "Folder",
               "guid": "12426",
@@ -134,6 +146,14 @@
           "className": "Folder",
           "guid": "12427",
           "children": [
+            {
+              "name": "AbilityStates",
+              "className": "ModuleScript",
+              "guid": "861266",
+              "filePaths": [
+                "sync/ReplicatedStorage/Modules/AbilityStates.luau"
+              ]
+            },
             {
               "name": "PlayerConfig",
               "className": "ModuleScript",
@@ -301,6 +321,14 @@
           "className": "Folder",
           "guid": "12431",
           "children": [
+            {
+              "name": "JumboGumboHandler",
+              "className": "Script",
+              "guid": "860914",
+              "filePaths": [
+                "sync/ServerScriptService/Abilities/JumboGumboHandler.server.luau"
+              ]
+            },
             {
               "name": "SugarRushHandler",
               "className": "Script",

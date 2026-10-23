@@ -14,6 +14,7 @@ local cancelAimEvent = events.Bindable:WaitForChild("CancelAim")
 
 -- Ability Events
 local sugarRushEvent = abilities.SugarRush:WaitForChild("SugarRushEvent")
+local jumboGumboEvent = abilities.JumboGumbo:WaitForChild("JumboGumboEvent")
 
 
 --[[--------------------------------------
@@ -23,6 +24,7 @@ local sugarRushEvent = abilities.SugarRush:WaitForChild("SugarRushEvent")
 	Left-Shift  | Sprint
 	Right-Click | Aim
 	Key: T 		| Sugar Rush
+	Key: G 		| Jumbo Gumbo
 	
 -----------------------------------------]]
 
@@ -57,6 +59,11 @@ UIS.InputBegan:Connect(function(input, gpe)
 	-- Key: T
 	if input.KeyCode == Enum.KeyCode.T then
 		sugarRushEvent:FireServer()
+	end
+	
+	-- Key: G
+	if input.KeyCode == Enum.KeyCode.G then
+		jumboGumboEvent:FireServer()
 	end
 end)
 

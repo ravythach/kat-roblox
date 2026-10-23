@@ -5,7 +5,6 @@ PlayerStates.IsJumping = false
 PlayerStates.IsAiming = false
 PlayerStates.IsSprinting = false
 
-local sugarRushActive = false
 local currentSpeed = PlayerConfig.WalkSpeed
 
 function PlayerStates.UpdateCurrentSpeed(speed: number, operation: string)
@@ -26,14 +25,6 @@ end
 
 function PlayerStates.GetCurrentSpeed()
 	return currentSpeed
-end
-
-function PlayerStates.SetSugarRushActive(state: boolean)
-	sugarRushActive = state
-end
-
-function PlayerStates.GetSugarRushActive()
-	return sugarRushActive
 end
 
 return PlayerStates

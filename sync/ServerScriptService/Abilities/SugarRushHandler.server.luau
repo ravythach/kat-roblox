@@ -1,8 +1,10 @@
 local RS = game:GetService("ReplicatedStorage")
 local PlayerStates = require(RS.Modules:WaitForChild("PlayerStates"))
-local sugarRushEvent = RS.Abilities.SugarRush:WaitForChild("SugarRushEvent")
-local sugarRushTrail = RS.Abilities.SugarRush:WaitForChild("RainbowTrail")
-local sugarRushSound = RS.Abilities.SugarRush:WaitForChild("MarioStarTheme")
+local AbilityStates = require(RS.Modules:WaitForChild("AbilityStates"))
+local sugarRush = RS.Abilities.SugarRush
+local sugarRushEvent = sugarRush:WaitForChild("SugarRushEvent")
+local sugarRushTrail = sugarRush:WaitForChild("RainbowTrail")
+local sugarRushSound = sugarRush:WaitForChild("MarioStarTheme")
 
 -- Ability Properties
 local DURATION = 12
@@ -27,14 +29,14 @@ sugarRushEvent.OnServerEvent:Connect(function(player)
 	local humanoid = character:FindFirstChildOfClass("Humanoid")
 	if not humanoid then return end
 	
-	-- Prevents Reactivation if Ability is Active
-	if PlayerStates.GetSugarRushActive() then 
+	-- Prevents reactivation if ability is CURRENTLY ACTIVE
+	if AbilityStates.GetSugarRushActive() then 
 		print("Sugar Rush can't be activated, stoopid! 🍆")
 		return
 	end
 	
 	-- Ability Effects
-	PlayerStates.SetSugarRushActive(true)
+	AbilityStates.SetSugarRushActive(true)
 	humanoid.WalkSpeed = PlayerStates.UpdateCurrentSpeed(SPEED_BOOST, "add")
 	toggleTrail(character, true)
 	sugarRushSound:Play()
@@ -59,6 +61,6 @@ sugarRushEvent.OnServerEvent:Connect(function(player)
 		task.wait(1)
 	end
 	
-	PlayerStates.SetSugarRushActive(false)
+	AbilityStates.SetSugarRushActive(false)
 	print("Sugar Rush is available again, nerd! 🤓")
 end)
