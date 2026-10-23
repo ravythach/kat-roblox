@@ -1,21 +1,30 @@
 local UIS = game:GetService("UserInputService")
 local RS = game:GetService("ReplicatedStorage")
-local sprintEvent = script.Parent.PlayerActions:WaitForChild("Sprint")
-local cancelSprintEvent = script.Parent.PlayerActions:WaitForChild("CancelSprint")
-local aimEvent = script.Parent.PlayerActions:WaitForChild("Aim")
-local cancelAimEvent = script.Parent.PlayerActions:WaitForChild("CancelAim")
+local events = RS.Events
+local abilities = RS.Abilities
+
+-- Bindable Events
+local sprintEvent = events.Bindable:WaitForChild("Sprint")
+local cancelSprintEvent = events.Bindable:WaitForChild("CancelSprint")
+local aimEvent = events.Bindable:WaitForChild("Aim")
+local cancelAimEvent = events.Bindable:WaitForChild("CancelAim")
+
+-- Remote Events
+
+
 -- Ability Events
-local sugarRushEvent = RS.AbilityEvents:WaitForChild("SugarRush")
+local sugarRushEvent = abilities.SugarRush:WaitForChild("SugarRushEvent")
 
---[[
 
-	INPUTS ADDED
-	------------
+--[[--------------------------------------
+
+	INPUTS
+	------
 	Left-Shift  | Sprint
 	Right-Click | Aim
-	Key: T 		| Ability 1 (Sugar Rush)
+	Key: T 		| Sugar Rush
 	
---]]
+-----------------------------------------]]
 
 UIS.InputBegan:Connect(function(input, gpe)
 	if gpe then return end
@@ -30,7 +39,7 @@ UIS.InputBegan:Connect(function(input, gpe)
 		end
 	end
 	
-	-- Forward
+	-- Key: W
 	if input.KeyCode == Enum.KeyCode.W then
 		-- Sprint will toggle if left-shift is held
 		if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then
@@ -50,6 +59,7 @@ UIS.InputBegan:Connect(function(input, gpe)
 		sugarRushEvent:FireServer()
 	end
 end)
+
 
 UIS.InputEnded:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.LeftShift then

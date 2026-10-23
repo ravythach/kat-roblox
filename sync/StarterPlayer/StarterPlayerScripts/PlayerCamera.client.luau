@@ -3,6 +3,7 @@ local RS = game:GetService("ReplicatedStorage")
 local Packages = RS:WaitForChild("Packages")
 local CameraService = require(Packages.CameraService)
 local PlayerConfig = require(RS.Modules.PlayerConfig)
+local changeFOVEvent = RS.Events.Bindable:WaitForChild("ChangeFOV")
 -------------------
 
 -- Player Camera Properties
@@ -19,7 +20,6 @@ CameraService:Change("MaxZoom", playerZoom)
 CameraService:Change("Offset", playerOffset)
 
 -- Events
-local changeFOVEvent = script:WaitForChild("ChangeFOV")
 changeFOVEvent.Event:Connect(function(fov)
 	CameraService:ChangeFOV(fov)
 end)

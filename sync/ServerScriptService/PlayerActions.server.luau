@@ -1,10 +1,13 @@
 local RS = game:GetService("ReplicatedStorage")
 local PlayerConfig = require(RS.Modules.PlayerConfig)
 local PlayerStates = require(RS.Modules.PlayerStates)
-local sprintEvent = RS.PlayerEvents:WaitForChild("Sprint")
-local cancelSprintEvent = RS.PlayerEvents:WaitForChild("CancelSprint")
+local events = RS.Events
 
--- Set Event Functions
+-- Remote Events
+local sprintEvent = events.Remote:WaitForChild("Sprint")
+local cancelSprintEvent = events.Remote:WaitForChild("CancelSprint")
+
+-- Event Functions
 sprintEvent.OnServerEvent:Connect(function(player)
 	local humanoid = player.Character:WaitForChild("Humanoid")
 	humanoid.WalkSpeed = PlayerStates.UpdateCurrentSpeed(PlayerConfig.SprintBoost, "add")
