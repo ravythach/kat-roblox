@@ -1088,14 +1088,6 @@
               ]
             },
             {
-              "name": "PlayerActions",
-              "className": "LocalScript",
-              "guid": "9204131",
-              "filePaths": [
-                "sync/StarterPlayer/StarterPlayerScripts/PlayerActions.client.luau"
-              ]
-            },
-            {
               "name": "PlayerCamera",
               "className": "LocalScript",
               "guid": "12229",
