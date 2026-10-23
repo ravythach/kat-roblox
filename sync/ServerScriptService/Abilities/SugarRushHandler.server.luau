@@ -11,6 +11,7 @@ local DURATION = 12
 local COOLDOWN = 5
 local SPEED_BOOST = 25
 
+-- Helper Function
 local function toggleTrail(character, enable: boolean)
 	local rootPart = character:FindFirstChild("HumanoidRootPart")
 	if not rootPart then return end
@@ -22,6 +23,9 @@ local function toggleTrail(character, enable: boolean)
 	end
 end
 
+----------------
+-- MAIN LOGIC --
+----------------
 sugarRushEvent.OnServerEvent:Connect(function(player)
 	local character = player.Character
 	if not character then return end
