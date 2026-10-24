@@ -56,8 +56,20 @@
               "children": [
                 {
                   "name": "JumboGumboBall",
-                  "className": "Part",
-                  "guid": "10887481"
+                  "className": "Model",
+                  "guid": "20459694",
+                  "children": [
+                    {
+                      "name": "Humanoid",
+                      "className": "Humanoid",
+                      "guid": "20459693"
+                    },
+                    {
+                      "name": "HumanoidRootPart",
+                      "className": "Part",
+                      "guid": "20459695"
+                    }
+                  ]
                 },
                 {
                   "name": "JumboGumboEvent",
@@ -151,14 +163,6 @@
           "className": "Folder",
           "guid": "12427",
           "children": [
-            {
-              "name": "AbilityStates",
-              "className": "ModuleScript",
-              "guid": "861266",
-              "filePaths": [
-                "sync/ReplicatedStorage/Modules/AbilityStates.luau"
-              ]
-            },
             {
               "name": "PlayerConfig",
               "className": "ModuleScript",
