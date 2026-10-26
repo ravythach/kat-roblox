@@ -825,7 +825,7 @@
           "guid": "12955",
           "children": [
             {
-              "name": "GumballGun-LP",
+              "name": "GumballGunModel",
               "className": "Model",
               "guid": "12637",
               "children": [
@@ -909,11 +909,6 @@
                   "guid": "12612"
                 },
                 {
-                  "name": "PackageLink",
-                  "className": "PackageLink",
-                  "guid": "12780"
-                },
-                {
                   "name": "Trigger",
                   "className": "MeshPart",
                   "guid": "12616"
@@ -926,16 +921,42 @@
               ]
             },
             {
-              "name": "Handle",
+              "name": "GumballGunServer",
+              "className": "Script",
+              "guid": "3632126",
+              "filePaths": [
+                "sync/StarterPack/Gumball Gun/GumballGunServer.server.luau"
+              ]
+            },
+            {
+              "name": "GumBullet",
               "className": "Part",
-              "guid": "12847",
+              "guid": "8103559",
               "children": [
                 {
-                  "name": "FireSound",
-                  "className": "Sound",
-                  "guid": "12869"
+                  "name": "BulletSize",
+                  "className": "NumberValue",
+                  "guid": "8103558"
+                },
+                {
+                  "name": "EnableTrail",
+                  "className": "Script",
+                  "guid": "8103560",
+                  "filePaths": [
+                    "sync/StarterPack/Gumball Gun/GumBullet/EnableTrail.server.luau"
+                  ]
                 }
               ]
+            },
+            {
+              "name": "Handle",
+              "className": "Part",
+              "guid": "12847"
+            },
+            {
+              "name": "PackageLink",
+              "className": "PackageLink",
+              "guid": "3632034"
             }
           ]
         }
