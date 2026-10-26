@@ -4,8 +4,8 @@ local PlayerStates = require(RS.Modules.PlayerStates)
 local events = RS.Events
 
 -- Remote Events
-local sprintEvent = events.Remote:WaitForChild("Sprint")
-local cancelSprintEvent = events.Remote:WaitForChild("CancelSprint")
+local sprintEvent = events.Remote.Sprint
+local cancelSprintEvent = events.Remote.CancelSprint
 
 -- Event Functions
 sprintEvent.OnServerEvent:Connect(function(player)

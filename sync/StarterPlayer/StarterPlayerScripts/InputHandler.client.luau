@@ -1,20 +1,13 @@
 local UIS = game:GetService("UserInputService")
 local RS = game:GetService("ReplicatedStorage")
+local player = game:GetService("Players").LocalPlayer
 local events = RS.Events
-local abilities = RS.Abilities
 
 -- Bindable Events
-local sprintEvent = events.Bindable:WaitForChild("Sprint")
-local cancelSprintEvent = events.Bindable:WaitForChild("CancelSprint")
-local aimEvent = events.Bindable:WaitForChild("Aim")
-local cancelAimEvent = events.Bindable:WaitForChild("CancelAim")
-
--- Remote Events
-
-
--- Ability Events
-local sugarRushEvent = abilities.SugarRush:WaitForChild("SugarRushEvent")
-local jumboGumboEvent = abilities.JumboGumbo:WaitForChild("JumboGumboEvent")
+local sprintEvent = events.Bindable.Sprint
+local cancelSprintEvent = events.Bindable.CancelSprint
+local aimEvent = events.Bindable.Aim
+local cancelAimEvent = events.Bindable.CancelAim
 
 
 --[[--------------------------------------
@@ -23,14 +16,16 @@ local jumboGumboEvent = abilities.JumboGumbo:WaitForChild("JumboGumboEvent")
 	------
 	Left-Shift  | Sprint
 	Right-Click | Aim
-	Key: T 		| Sugar Rush
-	Key: G 		| Jumbo Gumbo
 	
 -----------------------------------------]]
 
 UIS.InputBegan:Connect(function(input, gpe)
 	if gpe then return end
 	
+	---------------------
+	-- PLAYER MOVEMENT --
+	---------------------
+			
 	-- Left-Shift
 	if input.KeyCode == Enum.KeyCode.LeftShift then	
 		-- Sprint will only work if holding forward
@@ -43,7 +38,7 @@ UIS.InputBegan:Connect(function(input, gpe)
 	
 	-- Key: W
 	if input.KeyCode == Enum.KeyCode.W then
-		-- Sprint will toggle if left-shift is held
+	-- Sprint will toggle if left-shift is held
 		if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then
 			sprintEvent:Fire()
 		end
@@ -54,16 +49,6 @@ UIS.InputBegan:Connect(function(input, gpe)
 		-- Aim will cancel sprinting
 		cancelSprintEvent:Fire()
 		aimEvent:Fire()
-	end
-	
-	-- Key: T
-	if input.KeyCode == Enum.KeyCode.T then
-		sugarRushEvent:FireServer()
-	end
-	
-	-- Key: G
-	if input.KeyCode == Enum.KeyCode.G then
-		jumboGumboEvent:FireServer()
 	end
 end)
 
