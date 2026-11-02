@@ -166,102 +166,6 @@
           "guid": "12367",
           "children": [
             {
-              "name": "_Index",
-              "className": "Folder",
-              "guid": "12368",
-              "children": [
-                {
-                  "name": "weenachuangkud_fastcast2@0.1.5",
-                  "className": "Folder",
-                  "guid": "12369",
-                  "children": [
-                    {
-                      "name": "fastcast2",
-                      "className": "ModuleScript",
-                      "guid": "12610",
-                      "filePaths": [
-                        "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2.luau"
-                      ],
-                      "children": [
-                        {
-                          "name": "ActiveCast",
-                          "className": "ModuleScript",
-                          "guid": "12611",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/ActiveCast.luau"
-                          ]
-                        },
-                        {
-                          "name": "BaseCastSerial",
-                          "className": "ModuleScript",
-                          "guid": "12612",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/BaseCastSerial.luau"
-                          ]
-                        },
-                        {
-                          "name": "Config",
-                          "className": "ModuleScript",
-                          "guid": "12618",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Config.luau"
-                          ]
-                        },
-                        {
-                          "name": "DefaultConfigs",
-                          "className": "ModuleScript",
-                          "guid": "12619",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/DefaultConfigs.luau"
-                          ]
-                        },
-                        {
-                          "name": "FastCastEnums",
-                          "className": "ModuleScript",
-                          "guid": "12615",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/FastCastEnums.luau"
-                          ]
-                        },
-                        {
-                          "name": "Motor6DCache",
-                          "className": "ModuleScript",
-                          "guid": "12613",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Motor6DCache.luau"
-                          ]
-                        },
-                        {
-                          "name": "SerialSimulation",
-                          "className": "ModuleScript",
-                          "guid": "12614",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/SerialSimulation.luau"
-                          ]
-                        },
-                        {
-                          "name": "Signal",
-                          "className": "ModuleScript",
-                          "guid": "12617",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/Signal.luau"
-                          ]
-                        },
-                        {
-                          "name": "TypeDefinitions",
-                          "className": "ModuleScript",
-                          "guid": "12616",
-                          "filePaths": [
-                            "sync/ReplicatedStorage/Packages/_Index/weenachuangkud_fastcast2@0.1.5/fastcast2/TypeDefinitions.luau"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "name": "CameraService",
               "className": "ModuleScript",
               "guid": "12621",
@@ -285,14 +189,6 @@
                     "sync/ReplicatedStorage/Packages/DynamicCrosshair/Functions.luau"
                   ]
                 }
-              ]
-            },
-            {
-              "name": "FastCast2",
-              "className": "ModuleScript",
-              "guid": "12620",
-              "filePaths": [
-                "sync/ReplicatedStorage/Packages/FastCast2.luau"
               ]
             },
             {
