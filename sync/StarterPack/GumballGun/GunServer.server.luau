@@ -1,6 +1,6 @@
 --|| CONSTANTS TO PLAYTEST ||--
 local FIRE_DELAY = 0.15														-- Fire rate or cooldown between each bullet
-local BULLET_SPEED = 500
+local BULLET_SPEED = 300
 local BULLET_MAXDIST = 300
 local BULLET_SIZE = Vector3.new(1, 1, 1)
 local DEFAULT_GRAVITY = Vector3.new(0, -workspace.Gravity, 0)
@@ -8,8 +8,8 @@ local BULLET_GRAVITY = DEFAULT_GRAVITY * 0.7
 local BULLET_STATIC = true													-- Bullet model will NOT rotate if set to TRUE (best for symmetrical shapes)
 local BOUNCE_DECAY = 0.7													-- Default: 1 -- No energy loss; Values lower than 1 -> Energy Loss
 local MIN_BULLET_SPREAD_ANGLE = 0											-- Default: 0; keep changes small. The least accurate the bullet can be. 0 means straight forward. Generally you want to keep this at 0 so there's at least some chance of a 100% accurate shot.
-local MAX_BULLET_SPREAD_ANGLE = 0											-- Default: 4; keep changes small. The most accurate the bullet can be. 0 means straight forward. Always MAX > MIN. 90 may allow gun to shoot sideways; 180 backwards. Exceeding 180 does nothing
-local MAX_BOUNCES = 3														-- Maximum amount of times the bullet can bounce (only works with USE_PIERCE)
+local MAX_BULLET_SPREAD_ANGLE = 2											-- Default: 4; keep changes small. The most accurate the bullet can be. 0 means straight forward. Always MAX > MIN. 90 may allow gun to shoot sideways; 180 backwards. Exceeding 180 does nothing
+local MAX_BOUNCES = 1														-- Maximum amount of times the bullet can bounce (only works with USE_PIERCE)
 local TERMINATE_VELOCITY = 5												-- Minimum velocity of bullet it needs to reach before it gets destroyed
 local USE_PIERCE = true														-- Use ray pierce for enabling bouncing effect
 local DEBUG = false															-- Show bullet trails for debug purposes
