@@ -1,0 +1,65 @@
+local UIS = game:GetService("UserInputService")
+local RS = game:GetService("ReplicatedStorage")
+local dashEvent = RS.Events.Remote.Dash
+
+-- Assets
+local dashSounds = RS.Assets.Dash.DashSounds:GetChildren()
+local PlayerAnimations = require(RS.Modules.PlayerAnimations)
+
+--Dash
+local debounce = false
+local DASH_STRENGTH = 50
+local DASH_DURATION = 0.3
+local DASH_COOLDOWN = 1
+
+dashEvent.OnServerEvent:Connect(function(player)
+	local character = player.Character
+	local humanoid = character:WaitForChild("Humanoid")
+	local rootPart = character:WaitForChild("HumanoidRootPart")
+	
+	--GUI
+	local playerGui = player:WaitForChild("PlayerGui")
+	local screenGui = playerGui:WaitForChild("ScreenGui")
+	local dashUI = screenGui:WaitForChild("DashUI")
+	local dashReadyText = dashUI:WaitForChild("DashReady")
+	local cooldownText = dashUI:WaitForChild("Cooldown")
+	
+	if debounce then return end
+
+	-- Attach Dash Attachment to HumanoidRootPart
+	local dashAttachment = Instance.new("Attachment")
+	dashAttachment.Name = "DashAttachment"
+	dashAttachment.Parent = rootPart
+
+	-- Setup Dash Velocity
+	local dashVelocity = Instance.new("LinearVelocity")
+	dashVelocity.Name = "DashVelocity"
+	dashVelocity.ForceLimitMode = Enum.ForceLimitMode.PerAxis
+	dashVelocity.MaxAxesForce = Vector3.new(100000, 0, 100000)
+	dashVelocity.Attachment0 = dashAttachment
+
+	dashVelocity.VectorVelocity = rootPart.CFrame.LookVector * DASH_STRENGTH
+	dashVelocity.Parent = humanoid
+
+	-- Play Dash Animation
+	PlayerAnimations.DashForward(player)
+
+	-- Play through Dash Sounds
+	local dashSound = dashSounds[math.random(1, #dashSounds)]
+	dashSound:Play()
+
+	-- Dash Active
+	debounce = true
+	cooldownText.Visible = true
+	task.wait(DASH_DURATION)
+	dashVelocity:Destroy()
+
+	-- Cooldown
+	task.wait(DASH_COOLDOWN)
+	debounce = false
+	cooldownText.Visible = false
+end)
+
+
+
+

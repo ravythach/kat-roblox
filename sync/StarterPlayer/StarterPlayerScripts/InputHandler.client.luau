@@ -1,14 +1,45 @@
 local UIS = game:GetService("UserInputService")
 local RS = game:GetService("ReplicatedStorage")
+local CS = game:GetService("CollectionService")
 local player = game:GetService("Players").LocalPlayer
 local events = RS.Events
 
--- Bindable Events
-local sprintEvent = events.Bindable.Sprint
-local cancelSprintEvent = events.Bindable.CancelSprint
+-- Events
+local dashEvent = events.Remote.Dash
+local boomerangEvent = events.Remote.ThrowBoomerang
 local aimEvent = events.Bindable.Aim
 local cancelAimEvent = events.Bindable.CancelAim
 
+local function getMouseHitPosition()
+	local camera = workspace.CurrentCamera
+	local mouseLocation = UIS:GetMouseLocation()
+
+	local unitRay = camera:ViewportPointToRay(
+		mouseLocation.X,
+		mouseLocation.Y
+	)
+
+	local origin = unitRay.Origin
+	local direction = unitRay.Direction * 1000
+
+	local params = RaycastParams.new()
+	params.FilterType = Enum.RaycastFilterType.Exclude
+
+	-- Ignore player and all tagged enemies
+	local filter = CS:GetTagged("Enemy")
+	table.insert(filter, player.Character)
+
+	params.FilterDescendantsInstances = filter
+	params.IgnoreWater = true
+
+	local result = workspace:Raycast(origin, direction, params)
+
+	if result then
+		return result.Position
+	end
+
+	return origin + direction
+end
 
 --[[--------------------------------------
 
@@ -16,6 +47,7 @@ local cancelAimEvent = events.Bindable.CancelAim
 	------
 	Left-Shift  | Sprint
 	Right-Click | Aim
+	Key: B		| Boomerang
 	
 -----------------------------------------]]
 
@@ -28,43 +60,24 @@ UIS.InputBegan:Connect(function(input, gpe)
 			
 	-- Left-Shift
 	if input.KeyCode == Enum.KeyCode.LeftShift then	
-		-- Sprint will only work if holding forward
-		if UIS:IsKeyDown(Enum.KeyCode.W) then
-			-- Sprint will cancel aiming
-			cancelAimEvent:Fire()
-			sprintEvent:Fire()
-		end
-	end
-	
-	-- Key: W
-	if input.KeyCode == Enum.KeyCode.W then
-	-- Sprint will toggle if left-shift is held
-		if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then
-			sprintEvent:Fire()
-		end
+		dashEvent:FireServer()
 	end
 	
 	-- Right-Click	
 	if input.UserInputType == Enum.UserInputType.MouseButton2 then
-		-- Aim will cancel sprinting
-		cancelSprintEvent:Fire()
 		aimEvent:Fire()
 	end
+	
+	-- Key: B
+	if input.KeyCode == Enum.KeyCode.B then
+		boomerangEvent:FireServer(getMouseHitPosition())
+	end
+	
 end)
 
 
 UIS.InputEnded:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.LeftShift then
-		-- Keeps sprinting if player is still holding forward
-		if not UIS:IsKeyDown(Enum.KeyCode.W) then
-			cancelSprintEvent:Fire()
-		end
-	end
-	
-	if input.KeyCode == Enum.KeyCode.W then
-		cancelSprintEvent:Fire()
-	end
-	
+	-- Right-Click
 	if input.UserInputType == Enum.UserInputType.MouseButton2 then
 		cancelAimEvent:Fire()
 	end

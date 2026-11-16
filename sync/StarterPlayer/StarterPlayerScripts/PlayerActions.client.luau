@@ -9,33 +9,11 @@ local events = RS.Events
 ------------------
 
 -- Bindable Events
-local sprintEvent = events.Bindable:WaitForChild("Sprint")
-local cancelSprintEvent = events.Bindable:WaitForChild("CancelSprint")
 local aimEvent = events.Bindable:WaitForChild("Aim")
 local cancelAimEvent = events.Bindable:WaitForChild("CancelAim")
 local changeFOVEvent = events.Bindable:WaitForChild("ChangeFOV")
 
 -- Remote Events
-local sprintRemoteEvent = events.Remote:WaitForChild("Sprint")
-local cancelSprintRemoteEvent = events.Remote:WaitForChild("CancelSprint")
-
-sprintEvent.Event:Connect(function()
-	if not PlayerStates.IsSprinting then
-		sprintRemoteEvent:FireServer()
-		
-		changeFOVEvent:Fire(PlayerConfig.SprintFOV)
-		PlayerStates.IsSprinting = true
-	end
-end)
-
-cancelSprintEvent.Event:Connect(function()
-	if PlayerStates.IsSprinting then
-		cancelSprintRemoteEvent:FireServer()
-		
-		changeFOVEvent:Fire(PlayerConfig.FOV)
-		PlayerStates.IsSprinting = false
-	end
-end)
 
 aimEvent.Event:Connect(function()
 	if not PlayerStates.IsAiming then
