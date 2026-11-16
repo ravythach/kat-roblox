@@ -2,7 +2,7 @@ local RepStorage = game:GetService("ReplicatedStorage")
 local ColService = game:GetService("CollectionService")
 local SwiftCast = require(RepStorage.Packages.SwiftCast)
 local boomerangEvent = RepStorage.Events.Remote.ThrowBoomerang
-local boomerangTemplate = RepStorage.Assets.Boomerang.BoomerangModel
+local boomerangTemplate = RepStorage.Assets.Boomerang.Boomerang
 local PlayerAnimations = require(RepStorage.Modules.PlayerAnimations)
 
 --|| CONSTANTS ||--
@@ -15,7 +15,7 @@ local BOOMERANG_RADIUS = 2
 local BOOMERANG_MAX_TIME = 8
 
 local RETURN_DISTANCE = 4
-local THROW_COOLDOWN = 1
+local THROW_COOLDOWN = 0
 
 local DEBUG = true
 
@@ -108,7 +108,28 @@ end
 --|| POSITION UPDATE ||--
 
 local function onPositionChange(projectile, newPosition, oldPosition)
+	--GUI
+	local playerGui = projectile.UserData.Player:WaitForChild("PlayerGui")
+	local screenGui = playerGui:WaitForChild("ScreenGui")
+	local actionsUi = screenGui:WaitForChild("ActionsUi")
+	local readyImg = actionsUi.Boomerang:WaitForChild("BoomerangReady")
+	local cooldownImg = actionsUi.Boomerang:WaitForChild("BoomerangCooldown")
+	------
+	
 	local data = projectile.UserData
+	
+	-- Spin the boomerang
+	local boomerang = projectile.ProjectilePart
+	local BOOMERANG_SPIN_SPEED = 50
+
+	if boomerang then
+		local elapsed = os.clock() - data.SpawnTime
+		local spinAngle = math.rad(BOOMERANG_SPIN_SPEED) * elapsed
+
+		boomerang.CFrame =
+			CFrame.new(newPosition)
+			* CFrame.Angles(0, spinAngle, 0)
+	end
 
 	if not data.Returning then
 		-- Measure outward travel along the initial direction.
@@ -137,6 +158,8 @@ local function onPositionChange(projectile, newPosition, oldPosition)
 			SwiftCast.TerminateProjectile(projectile, "Caught")
 			-- Play caught animation
 			PlayerAnimations.CatchBoomerang(data.Player)
+			cooldownImg.Visible = false
+			readyImg.Visible = true
 			return
 		end
 
@@ -168,7 +191,15 @@ end
 --|| THROW ||--
 
 local function throwBoomerang(player, mousePosition)
-	print("Hello!")
+	--GUI
+	local playerGui = player:WaitForChild("PlayerGui")
+	local screenGui = playerGui:WaitForChild("ScreenGui")
+	local actionsUi = screenGui:WaitForChild("ActionsUi")
+	local readyImg = actionsUi.Boomerang:WaitForChild("BoomerangReady")
+	local cooldownImg = actionsUi.Boomerang:WaitForChild("BoomerangCooldown")
+	------
+	
+	
 	if typeof(mousePosition) ~= "Vector3" then
 		return
 	end
@@ -212,6 +243,9 @@ local function throwBoomerang(player, mousePosition)
 	--|| CREATE BOOMERANG ||--
 
 	local boomerang = boomerangTemplate:Clone()
+	if boomerang:IsA("Model") then
+		boomerang = boomerang.PrimaryPart
+	end
 
 	boomerang.Anchored = true
 	boomerang.CanCollide = false
@@ -219,7 +253,7 @@ local function throwBoomerang(player, mousePosition)
 	boomerang.CanQuery = false
 
 	boomerang.CFrame = CFrame.new(origin)
-	local BOOMERANG_ROTATION = CFrame.Angles(0, 0, math.rad(90))
+	local BOOMERANG_ROTATION = CFrame.Angles(0, 0, 0)
 	boomerang.Parent = boomerangFolder
 
 	--|| RAYCAST PARAMS ||--
@@ -264,6 +298,7 @@ local function throwBoomerang(player, mousePosition)
 			Player = player,
 			StartPosition = origin,
 			Direction = direction,
+			SpawnTime = os.clock(),
 
 			Returning = false,
 			Caught = false,
@@ -277,7 +312,8 @@ local function throwBoomerang(player, mousePosition)
 	}, settings)
 	
 	PlayerAnimations.ThrowBoomerang(player)
-	print("Finished!")
+	cooldownImg.Visible = true
+	readyImg.Visible = false
 end
 
 --|| EVENTS ||--

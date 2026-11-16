@@ -20,9 +20,9 @@ dashEvent.OnServerEvent:Connect(function(player)
 	--GUI
 	local playerGui = player:WaitForChild("PlayerGui")
 	local screenGui = playerGui:WaitForChild("ScreenGui")
-	local dashUI = screenGui:WaitForChild("DashUI")
-	local dashReadyText = dashUI:WaitForChild("DashReady")
-	local cooldownText = dashUI:WaitForChild("Cooldown")
+	local actionsUi = screenGui:WaitForChild("ActionsUi")
+	local readyImg = actionsUi.Dash:WaitForChild("DashReady")
+	local cooldownImg = actionsUi.Dash:WaitForChild("DashCooldown")
 	
 	if debounce then return end
 
@@ -50,14 +50,16 @@ dashEvent.OnServerEvent:Connect(function(player)
 
 	-- Dash Active
 	debounce = true
-	cooldownText.Visible = true
+	cooldownImg.Visible = true
+	readyImg.Visible = false
 	task.wait(DASH_DURATION)
 	dashVelocity:Destroy()
 
 	-- Cooldown
 	task.wait(DASH_COOLDOWN)
 	debounce = false
-	cooldownText.Visible = false
+	cooldownImg.Visible = false
+	readyImg.Visible = true
 end)
 
 
