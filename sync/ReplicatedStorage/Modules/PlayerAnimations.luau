@@ -9,7 +9,7 @@ local RS = game:GetService("ReplicatedStorage")
 ]]
 
 PlayerAnimations.ThrowBoomerang = function(player)
-	local character = player.Character
+	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoid = character:WaitForChild("Humanoid")
 	
 	-- Load animation
@@ -21,7 +21,7 @@ PlayerAnimations.ThrowBoomerang = function(player)
 end
 
 PlayerAnimations.CatchBoomerang = function(player)
-	local character = player.Character
+	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoid = character:WaitForChild("Humanoid")
 
 	-- Load animation
@@ -33,7 +33,7 @@ PlayerAnimations.CatchBoomerang = function(player)
 end
 
 PlayerAnimations.GloveSlap = function(player)
-	local character = player.Character
+	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoid = character:WaitForChild("Humanoid")
 
 	-- Load animation
@@ -45,7 +45,7 @@ PlayerAnimations.GloveSlap = function(player)
 end
 
 PlayerAnimations.DashForward = function(player)
-	local character = player.Character
+	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoid = character:WaitForChild("Humanoid")
 
 	-- Load animation

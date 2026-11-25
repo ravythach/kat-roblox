@@ -1,10 +1,14 @@
-local RS = game:GetService("ReplicatedStorage")
+local RepStorage = game:GetService("ReplicatedStorage")
+local ServerStorage = game:GetService("ServerStorage")
 local Players = game:GetService("Players")
 
 Players.PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(function(character)
-		local humanoid = character:FindFirstChildOfClass("Humanoid")
-		if not humanoid then return end
-		local rootPart = character:WaitForChild("HumanoidRootPart")
+		local backpack = player:WaitForChild("Backpack")
+		local tools = ServerStorage.Tools:GetChildren()
+
+		for _, tool in ipairs(tools) do
+			tool:Clone().Parent = backpack
+		end
 	end)
 end)

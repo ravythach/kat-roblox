@@ -17,7 +17,7 @@ local playerOffset = PlayerConfig.Offset
 
 local playerCamInfo = {
 	CharacterVisibility = "All",
-	Smoothness = 0.7,
+	Smoothness = 0.35,
 	Zoom = playerZoom,
 	MinZoom = playerZoom,
 	MaxZoom = playerZoom,

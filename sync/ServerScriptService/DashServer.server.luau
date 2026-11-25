@@ -37,8 +37,14 @@ dashEvent.OnServerEvent:Connect(function(player)
 	dashVelocity.ForceLimitMode = Enum.ForceLimitMode.PerAxis
 	dashVelocity.MaxAxesForce = Vector3.new(100000, 0, 100000)
 	dashVelocity.Attachment0 = dashAttachment
-
-	dashVelocity.VectorVelocity = rootPart.CFrame.LookVector * DASH_STRENGTH
+	
+	-- Setup Dash Direction
+	local direction = humanoid.MoveDirection
+	if direction.Magnitude == 0 then
+		direction = rootPart.CFrame.LookVector
+	end
+	
+	dashVelocity.VectorVelocity = direction * DASH_STRENGTH
 	dashVelocity.Parent = humanoid
 
 	-- Play Dash Animation

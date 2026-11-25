@@ -13,6 +13,7 @@ local BOOMERANG_DAMAGE = 10
 
 local BOOMERANG_RADIUS = 2
 local BOOMERANG_MAX_TIME = 8
+local BOOMERANG_SPIN_SPEED = 1500
 
 local RETURN_DISTANCE = 4
 local THROW_COOLDOWN = 0
@@ -120,7 +121,6 @@ local function onPositionChange(projectile, newPosition, oldPosition)
 	
 	-- Spin the boomerang
 	local boomerang = projectile.ProjectilePart
-	local BOOMERANG_SPIN_SPEED = 50
 
 	if boomerang then
 		local elapsed = os.clock() - data.SpawnTime
@@ -319,5 +319,6 @@ end
 --|| EVENTS ||--
 
 boomerangEvent.OnServerEvent:Connect(throwBoomerang)
+
 
 
