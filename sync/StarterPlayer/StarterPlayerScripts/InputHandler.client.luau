@@ -3,6 +3,7 @@ local RS = game:GetService("ReplicatedStorage")
 local CS = game:GetService("CollectionService")
 local player = game:GetService("Players").LocalPlayer
 local events = RS.Events
+local PlayerActions = require(RS.Modules.Client.PlayerActions)
 
 -- Events
 local dashEvent = RS.Remotes.Abilities.Dash.StartDash
@@ -45,6 +46,8 @@ end
 
 	INPUTS
 	------
+	Left-Click	| Primary Fire
+	Right-Click | Secondary Fire
 	Left-Shift  | Sprint
 	Right-Click | Aim
 	Key: B		| Boomerang
@@ -54,9 +57,10 @@ end
 UIS.InputBegan:Connect(function(input, gpe)
 	if gpe then return end
 	
-	---------------------
-	-- PLAYER MOVEMENT --
-	---------------------
+	-- Left-Click
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		PlayerActions.PrimaryFire(true)
+	end
 			
 	-- Left-Shift
 	if input.KeyCode == Enum.KeyCode.LeftShift then	
@@ -77,6 +81,11 @@ end)
 
 
 UIS.InputEnded:Connect(function(input)
+	-- Left-Click
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		PlayerActions.PrimaryFire(false)
+	end
+	
 	-- Right-Click
 	if input.UserInputType == Enum.UserInputType.MouseButton2 then
 		cancelAimEvent:Fire()

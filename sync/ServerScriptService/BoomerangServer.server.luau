@@ -4,7 +4,7 @@ local ServerStorage = game:GetService("ServerStorage")
 local SwiftCast = require(RepStorage.Packages.SwiftCast)
 local PlayerAnimations = require(RepStorage.Modules.Client.PlayerAnimations)
 local boomerangEvent = RepStorage.Remotes.Abilities.Boomerang.ThrowBoomerang
-local boomerangTemplate = ServerStorage.Assets.Abilities.Boomerang.Model.BoomerangModel
+local boomerangTemplate = RepStorage.Assets.Abilities.Boomerang.Model.BoomerangModel
 
 
 --|| CONSTANTS ||--
