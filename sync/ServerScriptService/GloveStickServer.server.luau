@@ -8,7 +8,7 @@ local HITBOX_FORWARD_OFFSET = 3
 local lastSwingAt = {}
 
 local RS = game:GetService("ReplicatedStorage")
-local PlayerAnimations = require(RS.Modules.PlayerAnimations)
+local PlayerAnimations = require(RS.Modules.Client.PlayerAnimations)
 
 
 warn("[GloveStickServer] Server script started")
@@ -55,7 +55,7 @@ local function onSwingRequest(player, tool)
 		end
 	end
 	
-	PlayerAnimations.GloveSlap(player)
+	PlayerAnimations.gloveSlap(player)
 end
 
 local function connectTool(tool)

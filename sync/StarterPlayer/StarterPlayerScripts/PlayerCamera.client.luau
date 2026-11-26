@@ -11,7 +11,6 @@ local player = Players.LocalPlayer
 -- Player Camera Properties
 local playerZoom = PlayerConfig.Zoom
 local playerFOV = PlayerConfig.FOV
-local playerSprintFOV = PlayerConfig.SprintFOV
 local playerAimFOV = PlayerConfig.AimFOV
 local playerOffset = PlayerConfig.Offset
 

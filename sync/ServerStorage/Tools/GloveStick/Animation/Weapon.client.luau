@@ -2,7 +2,7 @@ local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local ContentProvider = game:GetService("ContentProvider")
 local RS = game:GetService("ReplicatedStorage")
-local PlayerAnimations = require(RS.Modules.PlayerAnimations)
+local PlayerAnimations = require(RS.Modules.Client.PlayerAnimations)
 
 local player = Players.LocalPlayer
 local tool = script.Parent
@@ -12,8 +12,6 @@ local animationTrack
 local loadingAnimation = false
 local canSwing = true
 local cooldown = 0.5
-local RS = game:GetService("ReplicatedStorage")
-
 
 
 local function isEquipped()
@@ -129,5 +127,4 @@ tool.Unequipped:Connect(function()
 	end
 end)
 
-local PlayerAnimations = require(RS.Modules.PlayerAnimations)
-PlayerAnimations.GloveSlap(player)
+PlayerAnimations.gloveSlap(player)

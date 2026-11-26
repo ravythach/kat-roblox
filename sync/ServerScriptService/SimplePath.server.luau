@@ -1,6 +1,6 @@
 --Import the module so you can start using it
 local ServerStorage = game:GetService("ServerStorage")
-local SimplePath = require(ServerStorage.SimplePath)
+local SimplePath = require(ServerStorage.Modules.SimplePath)
 
 --Define npc
 local Dummy = workspace.Enemies.BlueRobot

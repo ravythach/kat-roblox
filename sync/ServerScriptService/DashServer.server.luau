@@ -1,10 +1,9 @@
+-- DEPENDENCIES --
 local UIS = game:GetService("UserInputService")
 local RS = game:GetService("ReplicatedStorage")
-local dashEvent = RS.Events.Remote.Dash
-
--- Assets
-local dashSounds = RS.Assets.Dash.DashSounds:GetChildren()
-local PlayerAnimations = require(RS.Modules.PlayerAnimations)
+local PlayerAnimations = require(RS.Modules.Client.PlayerAnimations)
+local dashEvent = RS.Remotes.Abilities.Dash.StartDash
+local dashSounds = RS.Assets.Abilities.Dash.Sounds:GetChildren()
 
 --Dash
 local debounce = false
@@ -48,7 +47,7 @@ dashEvent.OnServerEvent:Connect(function(player)
 	dashVelocity.Parent = humanoid
 
 	-- Play Dash Animation
-	PlayerAnimations.DashForward(player)
+	PlayerAnimations.startDash(player)
 
 	-- Play through Dash Sounds
 	local dashSound = dashSounds[math.random(1, #dashSounds)]

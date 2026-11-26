@@ -45,167 +45,160 @@
       "guid": "17310",
       "children": [
         {
-          "name": "Animations",
-          "className": "Folder",
-          "guid": "12983",
-          "children": [
-            {
-              "name": "CatchBoomerang",
-              "className": "Animation",
-              "guid": "12218"
-            },
-            {
-              "name": "DashForward",
-              "className": "Animation",
-              "guid": "12220"
-            },
-            {
-              "name": "GloveSlap",
-              "className": "Animation",
-              "guid": "12219"
-            },
-            {
-              "name": "ThrowBoomerang",
-              "className": "Animation",
-              "guid": "12217"
-            }
-          ]
-        },
-        {
           "name": "Assets",
           "className": "Folder",
           "guid": "12979",
           "children": [
             {
-              "name": "Boomerang",
+              "name": "Abilities",
               "className": "Folder",
-              "guid": "12980",
+              "guid": "2070403",
               "children": [
                 {
                   "name": "Boomerang",
-                  "className": "Model",
-                  "guid": "14279",
+                  "className": "Folder",
+                  "guid": "2070522",
                   "children": [
                     {
-                      "name": "Boomerang",
-                      "className": "MeshPart",
-                      "guid": "14238",
+                      "name": "Animations",
+                      "className": "Folder",
+                      "guid": "2070890",
                       "children": [
                         {
-                          "name": "Bandages",
-                          "className": "MeshPart",
-                          "guid": "14239"
+                          "name": "CatchBoomerang",
+                          "className": "Animation",
+                          "guid": "2071016"
                         },
                         {
-                          "name": "WeldConstraint",
-                          "className": "WeldConstraint",
-                          "guid": "17887"
+                          "name": "ThrowBoomerang",
+                          "className": "Animation",
+                          "guid": "2071017"
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "name": "BoomerangModel",
-                  "className": "UnionOperation",
-                  "guid": "17650",
-                  "children": [
-                    {
-                      "name": "AlignPosition",
-                      "className": "AlignPosition",
-                      "guid": "12152"
                     },
                     {
-                      "name": "AngularVelocity",
-                      "className": "AngularVelocity",
-                      "guid": "12153"
-                    },
-                    {
-                      "name": "Attachment0",
-                      "className": "Attachment",
-                      "guid": "12423",
+                      "name": "Sounds",
+                      "className": "Folder",
+                      "guid": "2070679",
                       "children": [
                         {
-                          "name": "Spin",
-                          "className": "ParticleEmitter",
-                          "guid": "15878"
+                          "name": "Throw1",
+                          "className": "Sound",
+                          "guid": "2070527"
                         }
                       ]
                     },
                     {
-                      "name": "HitboxAttachment",
-                      "className": "Attachment",
-                      "guid": "12426"
-                    },
-                    {
-                      "name": "Trail",
-                      "className": "Trail",
-                      "guid": "17637"
-                    },
-                    {
-                      "name": "TrailAtt0",
-                      "className": "Attachment",
-                      "guid": "12424"
-                    },
-                    {
-                      "name": "TrailAtt1",
-                      "className": "Attachment",
-                      "guid": "12425"
+                      "name": "VFX",
+                      "className": "Folder",
+                      "guid": "2071350"
                     }
                   ]
                 },
                 {
-                  "name": "ThrowSound1",
-                  "className": "Sound",
-                  "guid": "17418"
-                }
-              ]
-            },
-            {
-              "name": "Dash",
-              "className": "Folder",
-              "guid": "12981",
-              "children": [
-                {
-                  "name": "DashSounds",
+                  "name": "Dash",
                   "className": "Folder",
-                  "guid": "12982",
+                  "guid": "2070639",
                   "children": [
                     {
-                      "name": "Woosh1",
-                      "className": "Sound",
-                      "guid": "17420"
+                      "name": "Animations",
+                      "className": "Folder",
+                      "guid": "2071452",
+                      "children": [
+                        {
+                          "name": "StartDash",
+                          "className": "Animation",
+                          "guid": "2074113"
+                        }
+                      ]
                     },
                     {
-                      "name": "Woosh2",
-                      "className": "Sound",
-                      "guid": "17419"
+                      "name": "Sounds",
+                      "className": "Folder",
+                      "guid": "2070640",
+                      "children": [
+                        {
+                          "name": "Woosh1",
+                          "className": "Sound",
+                          "guid": "2070642"
+                        },
+                        {
+                          "name": "Woosh3",
+                          "className": "Sound",
+                          "guid": "2070643"
+                        }
+                      ]
                     },
                     {
-                      "name": "Woosh3",
-                      "className": "Sound",
-                      "guid": "17421"
+                      "name": "VFX",
+                      "className": "Folder",
+                      "guid": "2071551"
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "GumBullet",
-              "className": "Part",
-              "guid": "15877",
+              "name": "Melee",
+              "className": "Folder",
+              "guid": "2070220",
               "children": [
                 {
-                  "name": "BulletSize",
-                  "className": "NumberValue",
-                  "guid": "14405"
-                },
+                  "name": "GloveStick",
+                  "className": "Folder",
+                  "guid": "2071042",
+                  "children": [
+                    {
+                      "name": "Animations",
+                      "className": "Folder",
+                      "guid": "2072021",
+                      "children": [
+                        {
+                          "name": "GloveSlap",
+                          "className": "Animation",
+                          "guid": "2074094"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Sounds",
+                      "className": "Folder",
+                      "guid": "2071761"
+                    },
+                    {
+                      "name": "VFX",
+                      "className": "Folder",
+                      "guid": "2071664"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Weapons",
+              "className": "Folder",
+              "guid": "2070118",
+              "children": [
                 {
-                  "name": "EnableTrail",
-                  "className": "Script",
-                  "guid": "17363",
-                  "filePaths": [
-                    "sync/ReplicatedStorage/Assets/GumBullet/EnableTrail.server.luau"
+                  "name": "GumballGun",
+                  "className": "Folder",
+                  "guid": "2071152",
+                  "children": [
+                    {
+                      "name": "Animations",
+                      "className": "Folder",
+                      "guid": "2072163"
+                    },
+                    {
+                      "name": "Sounds",
+                      "className": "Folder",
+                      "guid": "2072164"
+                    },
+                    {
+                      "name": "VFX",
+                      "className": "Folder",
+                      "guid": "2072162"
+                    }
                   ]
                 }
               ]
@@ -238,23 +231,6 @@
                   "guid": "12469"
                 }
               ]
-            },
-            {
-              "name": "Remote",
-              "className": "Folder",
-              "guid": "12977",
-              "children": [
-                {
-                  "name": "Dash",
-                  "className": "RemoteEvent",
-                  "guid": "17309"
-                },
-                {
-                  "name": "ThrowBoomerang",
-                  "className": "RemoteEvent",
-                  "guid": "17308"
-                }
-              ]
             }
           ]
         },
@@ -264,11 +240,26 @@
           "guid": "12975",
           "children": [
             {
-              "name": "PlayerAnimations",
-              "className": "ModuleScript",
-              "guid": "14301",
-              "filePaths": [
-                "sync/ReplicatedStorage/Modules/PlayerAnimations.luau"
+              "name": "Client",
+              "className": "Folder",
+              "guid": "2073815",
+              "children": [
+                {
+                  "name": "PlayerAnimations",
+                  "className": "ModuleScript",
+                  "guid": "14301",
+                  "filePaths": [
+                    "sync/ReplicatedStorage/Modules/Client/PlayerAnimations.luau"
+                  ]
+                },
+                {
+                  "name": "PlayerCamera",
+                  "className": "ModuleScript",
+                  "guid": "5335014",
+                  "filePaths": [
+                    "sync/ReplicatedStorage/Modules/Client/PlayerCamera.luau"
+                  ]
+                }
               ]
             },
             {
@@ -286,6 +277,11 @@
               "filePaths": [
                 "sync/ReplicatedStorage/Modules/PlayerStates.luau"
               ]
+            },
+            {
+              "name": "Shared",
+              "className": "Folder",
+              "guid": "2073717"
             }
           ]
         },
@@ -455,6 +451,44 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Remotes",
+          "className": "Folder",
+          "guid": "2072861",
+          "children": [
+            {
+              "name": "Abilities",
+              "className": "Folder",
+              "guid": "2073347",
+              "children": [
+                {
+                  "name": "Boomerang",
+                  "className": "Folder",
+                  "guid": "2072975",
+                  "children": [
+                    {
+                      "name": "ThrowBoomerang",
+                      "className": "RemoteEvent",
+                      "guid": "2072862"
+                    }
+                  ]
+                },
+                {
+                  "name": "Dash",
+                  "className": "Folder",
+                  "guid": "2073075",
+                  "children": [
+                    {
+                      "name": "StartDash",
+                      "className": "RemoteEvent",
+                      "guid": "2072863"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -503,14 +537,6 @@
           ]
         },
         {
-          "name": "PlayerActions",
-          "className": "Script",
-          "guid": "17365",
-          "filePaths": [
-            "sync/ServerScriptService/PlayerActions.server.luau"
-          ]
-        },
-        {
           "name": "PlayerInitializer",
           "className": "Script",
           "guid": "17364",
@@ -539,9 +565,80 @@
       "guid": "17372",
       "children": [
         {
-          "name": "Azul",
+          "name": "Assets",
           "className": "Folder",
-          "guid": "13290"
+          "guid": "2072169",
+          "children": [
+            {
+              "name": "Abilities",
+              "className": "Folder",
+              "guid": "2074121",
+              "children": [
+                {
+                  "name": "Boomerang",
+                  "className": "Folder",
+                  "guid": "2921240",
+                  "children": [
+                    {
+                      "name": "Model",
+                      "className": "Folder",
+                      "guid": "2921350",
+                      "children": [
+                        {
+                          "name": "BoomerangModel",
+                          "className": "Model",
+                          "guid": "2921464",
+                          "children": [
+                            {
+                              "name": "BoomerangPart",
+                              "className": "MeshPart",
+                              "guid": "2921462",
+                              "children": [
+                                {
+                                  "name": "WeldConstraint",
+                                  "className": "WeldConstraint",
+                                  "guid": "2921468"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "OldModel",
+                          "className": "UnionOperation",
+                          "guid": "2921467",
+                          "children": [
+                            {
+                              "name": "Attachment0",
+                              "className": "Attachment",
+                              "guid": "2921458"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Melee",
+              "className": "Folder",
+              "guid": "2074221"
+            },
+            {
+              "name": "Weapons",
+              "className": "Folder",
+              "guid": "2072272",
+              "children": [
+                {
+                  "name": "GumballGun",
+                  "className": "Folder",
+                  "guid": "2072378"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Eclipse Animator Saves",
@@ -4333,11 +4430,18 @@
           ]
         },
         {
-          "name": "SimplePath",
-          "className": "ModuleScript",
-          "guid": "14303",
-          "filePaths": [
-            "sync/ServerStorage/SimplePath.luau"
+          "name": "Modules",
+          "className": "Folder",
+          "guid": "2072575",
+          "children": [
+            {
+              "name": "SimplePath",
+              "className": "ModuleScript",
+              "guid": "14303",
+              "filePaths": [
+                "sync/ServerStorage/Modules/SimplePath.luau"
+              ]
+            }
           ]
         },
         {
@@ -7355,11 +7459,6 @@
           ]
         },
         {
-          "name": "Axe Animations",
-          "className": "Folder",
-          "guid": "12700"
-        },
-        {
           "name": "Baseplate",
           "className": "Part",
           "guid": "15770",
@@ -9486,68 +9585,6 @@
               "guid": "17344",
               "filePaths": [
                 "sync/Workspace/FlyingEnemy/ShootingAI__17344.server.luau"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "GloveStick",
-          "className": "Model",
-          "guid": "14274",
-          "children": [
-            {
-              "name": "Glove",
-              "className": "MeshPart",
-              "guid": "14209",
-              "children": [
-                {
-                  "name": "WeldConstraint",
-                  "className": "WeldConstraint",
-                  "guid": "17872"
-                }
-              ]
-            },
-            {
-              "name": "Stick",
-              "className": "MeshPart",
-              "guid": "14210",
-              "children": [
-                {
-                  "name": "WeldConstraint",
-                  "className": "WeldConstraint",
-                  "guid": "17873"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "GloveStick",
-          "className": "Model",
-          "guid": "14275",
-          "children": [
-            {
-              "name": "Glove",
-              "className": "MeshPart",
-              "guid": "14211",
-              "children": [
-                {
-                  "name": "WeldConstraint",
-                  "className": "WeldConstraint",
-                  "guid": "17874"
-                }
-              ]
-            },
-            {
-              "name": "Stick",
-              "className": "MeshPart",
-              "guid": "14212",
-              "children": [
-                {
-                  "name": "WeldConstraint",
-                  "className": "WeldConstraint",
-                  "guid": "17875"
-                }
               ]
             }
           ]

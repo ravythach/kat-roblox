@@ -5,8 +5,8 @@ local player = game:GetService("Players").LocalPlayer
 local events = RS.Events
 
 -- Events
-local dashEvent = events.Remote.Dash
-local boomerangEvent = events.Remote.ThrowBoomerang
+local dashEvent = RS.Remotes.Abilities.Dash.StartDash
+local boomerangEvent = RS.Remotes.Abilities.Boomerang.ThrowBoomerang
 local aimEvent = events.Bindable.Aim
 local cancelAimEvent = events.Bindable.CancelAim
 

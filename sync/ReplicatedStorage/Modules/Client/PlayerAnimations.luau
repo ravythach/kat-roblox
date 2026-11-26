@@ -1,55 +1,55 @@
 local PlayerAnimations = {}
-local RS = game:GetService("ReplicatedStorage")
+local assetsFolder = game:GetService("ReplicatedStorage").Assets
 
---[[ TO USE THIS
-	Setup module in a different script:
+--[[ ANIMATIONS SETUP
+	In a different script:
 		local PlayerAnimations = require(RS.Modules.PlayerAnimations)
-	To use an animation:
-		PlayerAnimations.AnimationName(player)
+	In this script:
+		PlayerAnimations.animationName(player) --> Use camelCase
 ]]
 
-PlayerAnimations.ThrowBoomerang = function(player)
+PlayerAnimations.throwBoomerang = function(player)
 	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoid = character:WaitForChild("Humanoid")
 	
 	-- Load animation
-	local animation = RS.Animations.ThrowBoomerang
+	local animation = assetsFolder.Abilities.Boomerang.Animations.ThrowBoomerang
 	local animationTrack = humanoid:LoadAnimation(animation)
 	animationTrack.Looped = false
 	animationTrack:Play()
 	animationTrack:AdjustSpeed(2.7)
 end
 
-PlayerAnimations.CatchBoomerang = function(player)
+PlayerAnimations.catchBoomerang = function(player)
 	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoid = character:WaitForChild("Humanoid")
 
 	-- Load animation
-	local animation = RS.Animations.CatchBoomerang
+	local animation = assetsFolder.Abilities.Boomerang.Animations.CatchBoomerang
 	local animationTrack = humanoid:LoadAnimation(animation)
 	animationTrack.Looped = false
 	animationTrack:Play()
 	animationTrack:AdjustSpeed(1.7)
 end
 
-PlayerAnimations.GloveSlap = function(player)
+PlayerAnimations.gloveSlap = function(player)
 	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoid = character:WaitForChild("Humanoid")
 
 	-- Load animation
-	local animation = RS.Animations.GloveSlap
+	local animation = assetsFolder.Melee.GloveStick.Animations.GloveSlap
 	local animationTrack = humanoid:LoadAnimation(animation)
 	animationTrack.Looped = false
 	animationTrack:Play()
 	animationTrack:AdjustSpeed(1)
 end
 
-PlayerAnimations.DashForward = function(player)
+PlayerAnimations.startDash = function(player)
 	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoid = character:WaitForChild("Humanoid")
 
 	-- Load animation
-	local animation = RS.Animations.DashForward
+	local animation = assetsFolder.Abilities.Dash.Animations.StartDash
 	local animationTrack = humanoid:LoadAnimation(animation)
 	animationTrack.Looped = false
 	animationTrack:Play()

@@ -1,9 +1,11 @@
 local RepStorage = game:GetService("ReplicatedStorage")
 local ColService = game:GetService("CollectionService")
+local ServerStorage = game:GetService("ServerStorage")
 local SwiftCast = require(RepStorage.Packages.SwiftCast)
-local boomerangEvent = RepStorage.Events.Remote.ThrowBoomerang
-local boomerangTemplate = RepStorage.Assets.Boomerang.Boomerang
-local PlayerAnimations = require(RepStorage.Modules.PlayerAnimations)
+local PlayerAnimations = require(RepStorage.Modules.Client.PlayerAnimations)
+local boomerangEvent = RepStorage.Remotes.Abilities.Boomerang.ThrowBoomerang
+local boomerangTemplate = ServerStorage.Assets.Abilities.Boomerang.Model.BoomerangModel
+
 
 --|| CONSTANTS ||--
 
@@ -311,7 +313,7 @@ local function throwBoomerang(player, mousePosition)
 
 	}, settings)
 	
-	PlayerAnimations.ThrowBoomerang(player)
+	PlayerAnimations.throwBoomerang(player)
 	cooldownImg.Visible = true
 	readyImg.Visible = false
 end
