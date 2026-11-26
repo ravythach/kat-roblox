@@ -229,19 +229,9 @@
                   "guid": "2071152",
                   "children": [
                     {
-                      "name": "Animations",
-                      "className": "Folder",
-                      "guid": "2072163"
-                    },
-                    {
-                      "name": "Sounds",
-                      "className": "Folder",
-                      "guid": "2072164"
-                    },
-                    {
-                      "name": "VFX",
-                      "className": "Folder",
-                      "guid": "2072162"
+                      "name": "Projectile",
+                      "className": "Part",
+                      "guid": "7303273"
                     }
                   ]
                 }
@@ -325,7 +315,40 @@
             {
               "name": "Shared",
               "className": "Folder",
-              "guid": "2073717"
+              "guid": "2073717",
+              "children": [
+                {
+                  "name": "GumballGunConfig",
+                  "className": "ModuleScript",
+                  "guid": "7302303",
+                  "filePaths": [
+                    "sync/ReplicatedStorage/Modules/Shared/GumballGunConfig.luau"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Utils",
+              "className": "Folder",
+              "guid": "7302464",
+              "children": [
+                {
+                  "name": "HelperUtils",
+                  "className": "ModuleScript",
+                  "guid": "7302453",
+                  "filePaths": [
+                    "sync/ReplicatedStorage/Modules/Utils/HelperUtils.luau"
+                  ]
+                },
+                {
+                  "name": "ProjectileUtils",
+                  "className": "ModuleScript",
+                  "guid": "7302442",
+                  "filePaths": [
+                    "sync/ReplicatedStorage/Modules/Utils/ProjectileUtils.luau"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -4445,7 +4468,122 @@
           "guid": "2072575",
           "children": [
             {
+              "name": "SimplePath",
+              "className": "ModuleScript",
+              "guid": "14303",
+              "filePaths": [
+                "sync/ServerStorage/Modules/SimplePath.luau"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tools",
+          "className": "Folder",
+          "guid": "646692",
+          "children": [
+            {
               "name": "GumballGun",
+              "className": "Tool",
+              "guid": "5622468",
+              "children": [
+                {
+                  "name": "FireSound",
+                  "className": "Sound",
+                  "guid": "5622467"
+                },
+                {
+                  "name": "GumballGunClient",
+                  "className": "ModuleScript",
+                  "guid": "6185955",
+                  "filePaths": [
+                    "sync/ServerStorage/Tools/GumballGun/GumballGunClient.luau"
+                  ]
+                },
+                {
+                  "name": "Model",
+                  "className": "Model",
+                  "guid": "5622462",
+                  "children": [
+                    {
+                      "name": "Glassball",
+                      "className": "MeshPart",
+                      "guid": "5622459"
+                    }
+                  ]
+                },
+                {
+                  "name": "PackageLink",
+                  "className": "PackageLink",
+                  "guid": "5622463"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Weapons",
+          "className": "Folder",
+          "guid": "5622452",
+          "children": [
+            {
+              "name": "GloveStick",
+              "className": "Tool",
+              "guid": "17636",
+              "children": [
+                {
+                  "name": "Animation/Weapon",
+                  "className": "LocalScript",
+                  "guid": "14074",
+                  "filePaths": [
+                    "sync/ServerStorage/Weapons/GloveStick/Animation/Weapon.client.luau"
+                  ]
+                },
+                {
+                  "name": "GloveStick",
+                  "className": "Model",
+                  "guid": "14278",
+                  "children": [
+                    {
+                      "name": "Glove",
+                      "className": "MeshPart",
+                      "guid": "14236",
+                      "children": [
+                        {
+                          "name": "WeldConstraint",
+                          "className": "WeldConstraint",
+                          "guid": "17885"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Stick",
+                      "className": "MeshPart",
+                      "guid": "14237",
+                      "children": [
+                        {
+                          "name": "WeldConstraint",
+                          "className": "WeldConstraint",
+                          "guid": "17886"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Handle",
+                  "className": "Part",
+                  "guid": "15876"
+                },
+                {
+                  "name": "SwingRequest",
+                  "className": "RemoteEvent",
+                  "guid": "17307"
+                }
+              ]
+            },
+            {
+              "name": "OldGumballGun",
               "className": "Tool",
               "guid": "17635",
               "children": [
@@ -4459,7 +4597,7 @@
                   "className": "LocalScript",
                   "guid": "14073",
                   "filePaths": [
-                    "sync/ServerStorage/Modules/GumballGun/GunClient.client.luau"
+                    "sync/ServerStorage/Weapons/OldGumballGun/GunClient.client.luau"
                   ]
                 },
                 {
@@ -4570,7 +4708,7 @@
                   "className": "Script",
                   "guid": "17361",
                   "filePaths": [
-                    "sync/ServerStorage/Modules/GumballGun/GunServer.server.luau"
+                    "sync/ServerStorage/Weapons/OldGumballGun/GunServer.server.luau"
                   ]
                 },
                 {
@@ -4578,7 +4716,7 @@
                   "className": "Script",
                   "guid": "17362",
                   "filePaths": [
-                    "sync/ServerStorage/Modules/GumballGun/GunSwiftServer.server.luau"
+                    "sync/ServerStorage/Weapons/OldGumballGun/GunSwiftServer.server.luau"
                   ]
                 },
                 {
@@ -4599,145 +4737,8 @@
                   "guid": "15769"
                 }
               ]
-            },
-            {
-              "name": "SimplePath",
-              "className": "ModuleScript",
-              "guid": "14303",
-              "filePaths": [
-                "sync/ServerStorage/Modules/SimplePath.luau"
-              ]
             }
           ]
-        },
-        {
-          "name": "Tools",
-          "className": "Folder",
-          "guid": "646692",
-          "children": [
-            {
-              "name": "GloveStick",
-              "className": "Tool",
-              "guid": "17636",
-              "children": [
-                {
-                  "name": "Animation/Weapon",
-                  "className": "LocalScript",
-                  "guid": "14074",
-                  "filePaths": [
-                    "sync/ServerStorage/Tools/GloveStick/Animation/Weapon.client.luau"
-                  ]
-                },
-                {
-                  "name": "GloveStick",
-                  "className": "Model",
-                  "guid": "14278",
-                  "children": [
-                    {
-                      "name": "Glove",
-                      "className": "MeshPart",
-                      "guid": "14236",
-                      "children": [
-                        {
-                          "name": "WeldConstraint",
-                          "className": "WeldConstraint",
-                          "guid": "17885"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Stick",
-                      "className": "MeshPart",
-                      "guid": "14237",
-                      "children": [
-                        {
-                          "name": "WeldConstraint",
-                          "className": "WeldConstraint",
-                          "guid": "17886"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Handle",
-                  "className": "Part",
-                  "guid": "15876"
-                },
-                {
-                  "name": "SwingRequest",
-                  "className": "RemoteEvent",
-                  "guid": "17307"
-                }
-              ]
-            },
-            {
-              "name": "GumballGun",
-              "className": "Tool",
-              "guid": "5622468",
-              "children": [
-                {
-                  "name": "FireSound",
-                  "className": "Sound",
-                  "guid": "5622467"
-                },
-                {
-                  "name": "GumballGunClient",
-                  "className": "ModuleScript",
-                  "guid": "6185955",
-                  "filePaths": [
-                    "sync/ServerStorage/Tools/GumballGun/GumballGunClient.luau"
-                  ]
-                },
-                {
-                  "name": "GunServer",
-                  "className": "Script",
-                  "guid": "5622465",
-                  "filePaths": [
-                    "sync/ServerStorage/Tools/GumballGun/GunServer.server.luau"
-                  ]
-                },
-                {
-                  "name": "Model",
-                  "className": "Model",
-                  "guid": "5622462",
-                  "children": [
-                    {
-                      "name": "Glassball",
-                      "className": "MeshPart",
-                      "guid": "5622459"
-                    }
-                  ]
-                },
-                {
-                  "name": "PackageLink",
-                  "className": "PackageLink",
-                  "guid": "5622463"
-                },
-                {
-                  "name": "WeaponClient",
-                  "className": "LocalScript",
-                  "guid": "5622453",
-                  "filePaths": [
-                    "sync/ServerStorage/Tools/GumballGun/WeaponClient.client.luau"
-                  ]
-                },
-                {
-                  "name": "WeaponServer",
-                  "className": "Script",
-                  "guid": "5622466",
-                  "filePaths": [
-                    "sync/ServerStorage/Tools/GumballGun/WeaponServer.server.luau"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Weapons",
-          "className": "Folder",
-          "guid": "5622452"
         }
       ]
     },
@@ -4843,14 +4844,6 @@
               "guid": "14072",
               "filePaths": [
                 "sync/StarterPlayer/StarterPlayerScripts/PlayerActions.client.luau"
-              ]
-            },
-            {
-              "name": "PlayerActions",
-              "className": "ModuleScript",
-              "guid": "5620911",
-              "filePaths": [
-                "sync/StarterPlayer/StarterPlayerScripts/PlayerActions.luau"
               ]
             },
             {

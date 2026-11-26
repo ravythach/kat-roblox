@@ -16,11 +16,11 @@ local function getEquippedWeapon()
 	return require(module)
 end
 
-PlayerActions.PrimaryFire = function()
+PlayerActions.PrimaryFire = function(mouseDown)
 	local weapon = getEquippedWeapon()
 	
 	if weapon and weapon.PrimaryFire then
-		weapon.PrimaryFire()
+		weapon.PrimaryFire(mouseDown)
 	end
 end
 
