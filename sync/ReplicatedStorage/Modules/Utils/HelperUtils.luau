@@ -14,7 +14,7 @@ HelperUtils.getMouseRay = function()
 	local mouseLocation = UserInputService:GetMouseLocation()
 	local camera = workspace.CurrentCamera
 
-	return camera:ScreenPointToRay(
+	return camera:ViewportPointToRay(
 		mouseLocation.X,
 		mouseLocation.Y
 	)

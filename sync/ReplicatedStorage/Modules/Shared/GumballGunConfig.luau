@@ -1,5 +1,21 @@
 local GumballGunConfig = {}
 
+GumballGunConfig.settings = table.freeze({
+	damage = 10,
+	fireDelay = 0.13,
+	bulletSize = vector.one * 0.5,
+	bulletSpeed = 250,
+	bulletMaxDist = 300,
+	bulletMaxTime = 10,
+	bulletGravity = vector.create(0, -workspace.Gravity, 0),
+	bulletGravMult = 0.05,
+	bulletSpread = true,
+	bulletMinSpread = 0,
+	bulletMaxSpread = 1,
+	maxBounces = 2,
+	bounceDecay = 0.7,
+})
+
 GumballGunConfig.gumballColors = {
 	Color3.fromRGB(255, 75, 90),
 	Color3.fromRGB(255, 150, 60),
@@ -12,15 +28,5 @@ GumballGunConfig.gumballColors = {
 	Color3.fromRGB(255, 145, 200),
 	Color3.fromRGB(255, 255, 255),
 }
-
-GumballGunConfig.settings = table.freeze({
-	damage = 10,
-	fireDelay = 0.2,
-	bulletSpeed = 150,
-	bulletMaxDist = 200,
-	bulletMaxTime = 5,
-	bulletGravMult = 0.7,
-	bulletSpread = true,
-})
 
 return GumballGunConfig
