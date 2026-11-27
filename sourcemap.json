@@ -4486,6 +4486,11 @@
                   "name": "LegacySettings",
                   "className": "Folder",
                   "guid": "13008"
+                },
+                {
+                  "name": "RecoveryRuntime",
+                  "className": "Folder",
+                  "guid": "655349"
                 }
               ]
             },

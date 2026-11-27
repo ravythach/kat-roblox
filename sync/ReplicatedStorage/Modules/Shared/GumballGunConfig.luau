@@ -1,8 +1,8 @@
 local GumballGunConfig = {}
 
 GumballGunConfig.settings = table.freeze({
-	damage = 10,
-	bounceDamage = 5,
+	damage = 5,
+	bounceDamage = 3,
 	fireDelay = 0.13,
 	bulletSize = vector.one * 0.5,
 	bulletSpeed = 220,

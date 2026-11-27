@@ -151,11 +151,25 @@ GumballGunServer.PrimaryFire = function(player, mouseRay)
 			UserData = {
 				Bounces = 0,
 				Damage = settings.damage,
+				LastHits = {},
 			},
 
 			OnHit = function(projectile, result, hasPierced)
 				local data = projectile.UserData
-				ProjectileUtils.damageHumanoid(result, data.Damage)
+				local enemy = result.Instance:FindFirstAncestorOfClass("Model")
+				local humanoid = enemy and enemy:FindFirstChildOfClass("Humanoid")
+				
+				-- Prevents bullet from hitting same enemy twice instantly
+				if humanoid then
+					local now = os.clock()
+					local lastHit = data.LastHits[humanoid] or -math.huge
+					local ENEMY_HIT_COOLDOWN = 0.1
+					
+					if now - lastHit >= ENEMY_HIT_COOLDOWN then
+						data.LastHits[humanoid] = now
+						ProjectileUtils.damageHumanoid(result, data.Damage)
+					end
+				end
 
 				if hasPierced then
 					local velocity = projectile.Velocity
