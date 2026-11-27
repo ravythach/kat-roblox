@@ -12,8 +12,11 @@ GumballGunConfig.settings = table.freeze({
 	bulletSpread = true,
 	bulletMinSpread = 0,
 	bulletMaxSpread = 1,
-	maxBounces = 2,
-	bounceDecay = 0.7,
+	multiMinSpread = 1, -- Used for multi-bullet spread
+	multiMaxSpread = 2, -- Used for multi-bullet spread
+	maxBounces = 10,
+	bounceDecay = 0.95,
+	projectileCount = 3,
 })
 
 GumballGunConfig.gumballColors = {

@@ -31,7 +31,7 @@ local bulletCache = PartCache.new(
 )
 
 --|| HELPER FUNCTIONS ||--
-local function getGumballBullet(origin)
+local function getBulletPart(origin)
     local bullet = bulletCache:GetPart()
     local bulletTrail = bullet:FindFirstChildOfClass("Trail")
 
@@ -40,7 +40,7 @@ local function getGumballBullet(origin)
         bulletTrail.Enabled = false
     end
 
-    -- Move bullet to muzzle
+    -- Move bullet to origin
     bullet.CFrame = CFrame.new(origin)
 
     -- Randomize bullet color
@@ -115,83 +115,105 @@ GumballGunServer.PrimaryFire = function(player, mouseRay)
 		targetPosition - muzzleOrigin
 	).Unit
 
-	if settings.bulletSpread then
-		bulletDirection = ProjectileUtils.applyDirectionalSpread(bulletDirection, settings.bulletMinSpread, settings.bulletMaxSpread)
-	end
-
 	-- Prevents bullets from shooting backwards
 	if bulletDirection:Dot(direction) <= 0 then
 		bulletDirection = direction
 	end
+	
+	-- Fire multiple projectiles
+	local projectiles = {}
 
-	local bullet = getGumballBullet(muzzleOrigin)
-
-	SwiftCast.SpawnProjectile({
-		Position = muzzleOrigin,
-		Velocity = bulletDirection * settings.bulletSpeed + movementVelocity,
-		Acceleration =  settings.bulletGravity * settings.bulletGravMult,
-		MaxFlyTime = settings.bulletMaxTime,
-		MaxFlyDistance = settings.bulletMaxDist,
-		MaxPiercesPerStep = settings.maxBounces + 1,
-		ProjectilePart = bullet,
-		RaycastParams = params,
-		RaycastFunction = SwiftCast.RaycastFunctions.Spherecast,
-		SpherecastRadius = bullet.Size.X / 2,
+	for count = 1, settings.projectileCount do
+		local bulletPart = getBulletPart(muzzleOrigin)
 		
-		UserData = {
-			Bounces = 0,
-			Damage = settings.damage,
-		},
-
-		OnHit = function(projectile, result, hasPierced)
-			local data = projectile.UserData
-			ProjectileUtils.damageHumanoid(result, data.Damage)
-			
-			if hasPierced then
-				local velocity = projectile.Velocity
-				local normal = result.Normal
-
-				local reflectedVelocity = ProjectileUtils.getReflectedVelocity(velocity, normal)
-				projectile.Velocity = reflectedVelocity * settings.bounceDecay
-
-				-- Prevents sphere center from hitting same surface by moving immediately
-				local radius = settings.bulletSize.X / 2
-				projectile.Position = result.Position + normal * (radius + 0.01)
+		-- First bullet is most accurate, other bullets have increased spread
+		if settings.bulletSpread then
+			if count == 1 then
+				bulletDirection = ProjectileUtils.applyDirectionalSpread(bulletDirection, settings.bulletMinSpread, settings.bulletMaxSpread)
+			else
+				bulletDirection = ProjectileUtils.applyDirectionalSpread(bulletDirection, settings.multiMinSpread, settings.multiMaxSpread)
 			end
-		end,
+		end
 		
-		CanPierce = function(projectile, result)
-			local data = projectile.UserData
-			
-			if data.Bounces >= settings.maxBounces then
-				return false
-			end
+		-- Store projectiles in projectiles table
+		projectiles[count] = SwiftCast.CreateProjectile({
+			Position = muzzleOrigin,
+			Velocity = bulletDirection * settings.bulletSpeed + movementVelocity,
+			Acceleration =  settings.bulletGravity * settings.bulletGravMult,
+			MaxFlyTime = settings.bulletMaxTime,
+			MaxFlyDistance = settings.bulletMaxDist,
+			MaxPiercesPerStep = settings.maxBounces + 1,
+			ProjectilePart = bulletPart,
+			RaycastParams = params,
+			RaycastFunction = SwiftCast.RaycastFunctions.Spherecast,
+			SpherecastRadius = bulletPart.Size.X / 2,
 
-			if projectile.Velocity.Magnitude < TERMINATE_VELOCITY then
-				return false
-			end
+			UserData = {
+				Bounces = 0,
+				Damage = settings.damage,
+			},
 
-			data.Bounces += 1
-			data.Damage /= 2
+			OnHit = function(projectile, result, hasPierced)
+				local data = projectile.UserData
+				ProjectileUtils.damageHumanoid(result, data.Damage)
 
-			return true
-		end,
+				if hasPierced then
+					local velocity = projectile.Velocity
+					local normal = result.Normal
+					
+					-- Reflect and bounce off surface
+					local reflectedVelocity = ProjectileUtils.getReflectedVelocity(velocity, normal)
+					projectile.Velocity = reflectedVelocity * settings.bounceDecay
 
-		OnDestroy = function(projectile, reason)
-			local bullet = projectile.ProjectilePart
+					-- Prevents sphere center from hitting same surface by moving immediately
+					local radius = settings.bulletSize.X / 2
+					projectile.Position = result.Position + normal * (radius + 0.01)
+					
+					-- Revert gravity after bouncing
+					projectile.Acceleration = settings.bulletGravity * 1
+				end
+			end,
 
-			if bullet then
-				local bulletTrail = bullet:FindFirstChildOfClass("Trail")
-
-				if bulletTrail then
-					bulletTrail.Enabled = false
-					bulletTrail:Clear()
+			CanPierce = function(projectile, result)
+				local data = projectile.UserData
+				
+				-- Return if max bounces reached
+				if data.Bounces >= settings.maxBounces then
+					return false
+				end
+				
+				-- Return if bullet is too slow
+				if projectile.Velocity.Magnitude < TERMINATE_VELOCITY then
+					return false
 				end
 
-				bulletCache:ReturnPart(bullet)
-			end
-		end,
-	})
+				data.Bounces += 1
+
+				return true
+			end,
+
+			OnDestroy = function(projectile, reason)
+				local bulletPart = projectile.ProjectilePart
+				
+				-- Remove Trail and Return to Cache
+				if bulletPart then
+					local bulletTrail = bulletPart:FindFirstChildOfClass("Trail")
+
+					if bulletTrail then
+						bulletTrail.Enabled = false
+						bulletTrail:Clear()
+					end
+
+					bulletCache:ReturnPart(bulletPart)
+				end
+			end,
+		})
+	end
+	
+	-- Activate all projectiles
+	for _, projectile in ipairs(projectiles) do
+		SwiftCast.ActivateProjectile(projectile)
+	end
 end
 
 -- Clean up cooldowns when player disconnects
