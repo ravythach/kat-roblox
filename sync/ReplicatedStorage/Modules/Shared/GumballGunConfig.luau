@@ -2,10 +2,11 @@ local GumballGunConfig = {}
 
 GumballGunConfig.settings = table.freeze({
 	damage = 10,
+	bounceDamage = 5,
 	fireDelay = 0.13,
 	bulletSize = vector.one * 0.5,
-	bulletSpeed = 250,
-	bulletMaxDist = 300,
+	bulletSpeed = 220,
+	bulletMaxDist = 350,
 	bulletMaxTime = 10,
 	bulletGravity = vector.create(0, -workspace.Gravity, 0),
 	bulletGravMult = 0.05,

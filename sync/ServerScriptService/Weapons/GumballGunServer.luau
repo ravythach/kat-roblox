@@ -171,6 +171,9 @@ GumballGunServer.PrimaryFire = function(player, mouseRay)
 					
 					-- Revert gravity after bouncing
 					projectile.Acceleration = settings.bulletGravity * 1
+					
+					-- Adjust damage after bouncing
+					data.Damage = settings.bounceDamage
 				end
 			end,
 

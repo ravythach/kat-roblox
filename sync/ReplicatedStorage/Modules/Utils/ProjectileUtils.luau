@@ -11,6 +11,7 @@ ProjectileUtils.damageHumanoid = function(rayResult, damage)
 
 	if humanoid and humanoid.Health > 0 then
 		humanoid:TakeDamage(damage)
+		print("Damaged humanoid:", humanoid, "for", damage, "damage.")
 	end
 end
 
